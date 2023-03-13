@@ -1,7 +1,8 @@
-# Bg-remover App
+
+## Bg-remover App
 | Software  | Version | Platform | Download Link |
 | --- | --- | --- | --- |
-| BG-Remover | 1.1.2 | Windows | [Download](https://github.com/developersharif/bgremover-app/releases/download/v1.1.2/BG-Remover.exe) |
+| BG-Remover(Stable) | 1.1.2 | Windows | [Download](https://github.com/developersharif/bgremover-app/releases/download/v1.1.2/BG-Remover.exe) |
 | BG-Remover(Beta) | 1.0.0 | Windows | [Download](https://github.com/developersharif/bgremover-app/releases/download/v1.0.0/BG.Remover.exe) |
 |  BG-Remover(Beta | 1.0.0 | Linux | [Download](https://github.com/developersharif/bgremover-app/releases/download/v1.0.0/BG.Remover0) |
 
