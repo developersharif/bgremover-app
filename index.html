@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BG-Remover</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .wrap {
+            display: grid;
+            justify-items: center;
+            background-color: #F5F7F8;
+            max-width: 100%;
+            font-family: "Oxygen";
+        }
+
+        .wrap .banner {
+            display: grid;
+            grid-template-columns: 60% 1fr;
+            max-width: 85%;
+            min-height: 100vh;
+            padding-top: 100px;
+            box-sizing: border-box;
+        }
+
+        .wrap .banner .banner-left img {
+            max-width: 100%;
+            height: auto;
+            box-shadow: -6px 6px 20px 8px lightgray;
+        }
+
+        .wrap .banner .banner-right {
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        .wrap .banner .banner-right .btn-wrap {
+            align-content: center;
+        }
+
+        .wrap .banner .banner-right .btn-wrap .btn {
+            display: inline-block;
+            width: 40%;
+            padding: 0 20px;
+        }
+
+        .wrap .banner .banner-right .btn-wrap .btn a {
+            display: inline-block;
+            width: 100%;
+            text-decoration: none;
+            border: none;
+            color: #fff;
+            padding: 12px;
+            border-radius: 25px;
+            box-shadow: 0 0 8px 1px rgba(56, 53, 68, 0.2);
+            transition: all 0.3s;
+        }
+
+        .wrap .banner .banner-right .btn-wrap .btn.download-btn a {
+            background-color: #0099d8;
+        }
+
+        .wrap .banner .banner-right .btn-wrap .btn.download-btn a:hover {
+            box-shadow: 2px 2px 10px 1px rgba(56, 53, 68, 0.4);
+            background-color: #0087bf;
+        }
+
+        .wrap .banner .banner-right .btn-wrap .btn.demo-btn a {
+            background-color: #383544;
+        }
+
+        .wrap .banner .banner-right .btn-wrap .btn.demo-btn a:hover {
+            box-shadow: 2px 2px 10px 1px rgba(56, 53, 68, 0.4);
+            background-color: #2c2a36;
+        }
+
+        .wrap .banner .description {
+            grid-column: 1/-1;
+            text-align: center;
+            font-size: 1.5rem;
+            padding: 0 50px;
+        }
+
+        .wrap .banner .description .notice {
+            font-size: 12px;
+        }
+
+        .wrap .feature-section {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(auto, 300px));
+            justify-content: center;
+            grid-gap: 25px;
+            justify-self: stretch;
+            padding: 80px 0;
+            background-color: #f0fbff;
+        }
+
+        .wrap .feature-section h2 {
+            font-size: 2rem;
+            margin: 0 0 40px;
+            text-align: center;
+            grid-column: 1/-1;
+            color: #383544;
+        }
+
+        .wrap .feature-section .feature {
+            background-color: rgba(255, 255, 255, 0.4);
+            text-align: center;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 50px;
+            box-shadow: 0 0 15px 0.5px rgba(56, 53, 68, 0.1);
+            transition: box-shadow 0.3s;
+            position: relative;
+        }
+
+        .wrap .feature-section .feature i {
+            position: absolute;
+            width: 42px;
+            height: 42px;
+            top: -35px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            border-radius: 50%;
+            box-shadow: 0 3px 15px 2px rgba(0, 0, 0, 0.2);
+            padding: 8px;
+            color: #0099d8;
+            background-color: #fff;
+            font-size: 2.5rem;
+        }
+
+        .wrap .feature-section .get-involved {
+            grid-column: 1/-1;
+            text-align: center;
+        }
+
+        .wrap .feature-section .get-involved a {
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            background-color: #383544;
+            padding: 15px 30px;
+            border-radius: 25px;
+            margin: 20px 0;
+            box-shadow: 0 0 8px 1px rgba(56, 53, 68, 0.5);
+            transition: all 0.3s;
+        }
+
+        .wrap .feature-section .get-involved a:hover {
+            box-shadow: 2px 2px 10px 1px rgba(56, 53, 68, 0.8);
+            background-color: #2c2a36;
+        }
+
+        .wrap .feature-section .get-involved a i {
+            vertical-align: middle;
+        }
+
+        .wrap .cta {
+            text-align: center;
+        }
+
+        .wrap .cta .cta-btn {
+            padding: 15px 0;
+        }
+
+        .wrap .cta .cta-btn p {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        .wrap .cta .cta-btn a {
+            display: inline-block;
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: #fff;
+            background-color: #0099d8;
+            padding: 20px 80px;
+            border-radius: 45px;
+            margin: 50px 0;
+            box-shadow: 0 0 8px 1px rgba(56, 53, 68, 0.5);
+            transition: all 0.3s;
+        }
+
+        .wrap .cta .cta-btn a:hover {
+            box-shadow: 2px 2px 10px 1px rgba(56, 53, 68, 0.6);
+            background-color: #0087bf;
+        }
+
+        .wrap .cta .cta-btn .warning {
+            font-size: 14px;
+        }
+
+        .wrap .cta .credit p a {
+            text-decoration: none;
+            color: #0099d8;
+        }
+
+        .wrap .cta .credit p i {
+            color: #e80d2e;
+            animation: heartbeat 3s infinite;
+            vertical-align: middle;
+        }
+
+        @media (max-width: 1230px) {
+            .wrap .banner {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 1040px) {
+            .wrap .banner {
+                padding-top: 20px;
+            }
+
+            .wrap .banner .banner-left,
+            .wrap .banner .banner-right {
+                grid-column: span 2;
+            }
+
+            .wrap .banner .banner-right {
+                padding-top: 10px;
+            }
+
+            .wrap .banner .banner-right .btn:first-child {
+                padding-left: 0;
+            }
+
+            .wrap .feature-section {
+                grid-template-columns: repeat(4, 150px);
+            }
+
+            .wrap .feature-section .feature {
+                grid-column: span 2;
+            }
+
+            .wrap .feature-section .get-involved {
+                grid-column: span 4;
+            }
+        }
+
+        @media (max-width: 742px) {
+            .wrap .banner {
+                padding-top: 10px;
+            }
+
+            .wrap .banner .description {
+                font-size: 1.2rem;
+                padding: 0 20px;
+            }
+
+            .wrap .feature-section {
+                grid-template-columns: repeat(2, 200px);
+            }
+
+            .wrap .feature-section .get-involved {
+                grid-column: span 2;
+            }
+
+            .wrap .cta .cta-btn {
+                padding: 80px 0;
+            }
+
+            .wrap .cta .cta-btn p {
+                font-size: 2em;
+            }
+
+            .wrap .cta .cta-btn a {
+                padding: 15px 30px;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 488px) {
+            .wrap .banner .banner-right .btn-wrap .btn {
+                width: 35%;
+            }
+
+            .wrap .feature-section {
+                grid-template-columns: repeat(2, 140px);
+            }
+
+            .wrap .feature-section .get-involved {
+                grid-column: span 2;
+            }
+        }
+
+        /*Beating heart animation keyframe*/
+        @keyframes heartbeat {
+            0% {
+                transform: scale(1);
+            }
+
+            5% {
+                transform: scale(1.3);
+            }
+
+            10% {
+                transform: scale(1.1);
+            }
+
+            20% {
+                transform: scale(1.5);
+            }
+
+            30% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <h2>BG Remover</h2>
+        <section class="banner">
+            <div class="banner-left">
+                <img src="https://ik.imagekit.io/developersharif/bg-remover/Screenshot_7.png?updatedAt=1679156313526"
+                    alt="" />
+            </div>
+            <div class="banner-right">
+                <img src="https://ik.imagekit.io/developersharif/bg-remover/icon.png?updatedAt=1679155330012" alt=""
+                    style="
+                height: auto;
+                width: 100px;
+            " />
+                <h1>BG Remover</h1>
+                <p class="tagline">AI powered Offline Background Remover!</p>
+                <div class="btn-wrap">
+                    <div class="btn download-btn">
+                        <a href="https://github.com/developersharif/bgremover-app">Download</a>
+                    </div>
+                    <div class="btn demo-btn">
+                        <a target="_blank"
+                            href="https://user-images.githubusercontent.com/54396379/226102386-ede49d4e-7683-4777-be2e-104f3f335998.mp4">Demo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="description">
+                <p>Our Offline AI-powered Background Remover Desktop App effortlessly removes backgrounds from any image
+                    or photo. It utilizes the latest machine learning algorithms to provide accurate results within
+                    seconds. Download now and experience the ease and efficiency of our AI-powered solution.</p>
+            </div>
+        </section>
+
+        <section class="feature-section">
+            <h2>Features</h2>
+            <div class="feature feature-item">
+                <i class="fa fa-magic"></i>
+                <h3>Background Remove</h3>
+                <p>Introducing our Offline AI-powered Background Remover Desktop App, featuring one-click background
+                    removal for effortless image editing.</p>
+            </div>
+            <div class="feature feature-item">
+                <i class="fa fa-clipboard""></i>
+                <h3>Drag and Drop</h3>
+                <p>Simply drag and drop your image to instantly remove the background with our automatic tool</p>
+            </div>
+            <div class=" feature feature-item">
+                    <i class="fa fa-paint-brush"></i>
+                    <h3>Basic Editing </h3>
+                    <p> Our app also includes basic editing features, allowing you to change the background image and
+                        color.
+                        Experience the power of AI and streamline your photo editing process.</p>
+            </div>
+
+        </section>
+
+        <section class="cta">
+            <div class="cta-btn">
+                <p>Your new home awaits!</p>
+                <a href="https://github.com/developersharif/bgremover-app">Download BG Remover Now!</a>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
