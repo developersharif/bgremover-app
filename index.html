@@ -5,17 +5,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BG-Remover</title>
+    <title>BG-Remover - AI powered Offline Background Remover!</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://vjs.zencdn.net/8.0.4/video-js.css" rel="stylesheet" />
+    <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+    <link href="https://unpkg.com/@videojs/themes@1/dist/city/index.css" rel="stylesheet" />
+    <meta property="og:title" content="AI powered Offline Background Remover!">
+    <meta property="og:description"
+        content="Effortlessly remove backgrounds with AI precision - Download now for picture-perfect results!">
+    <meta property="og:image" content="https://ik.imagekit.io/developersharif/bg-remover/Screenshot_7.png">
+    <meta property="og:url" content="https://developersharif.github.io/bgremover-app">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI powered Offline Background Remover!">
+    <meta name="twitter:description"
+        content="Effortlessly remove backgrounds with AI precision - Download now for picture-perfect results!">
+    <meta name="twitter:image" content="https://ik.imagekit.io/developersharif/bg-remover/Screenshot_7.png">
     <style>
         body {
             margin: 0;
         }
 
+        body .svg {
+
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' x2='0' y1='1' y2='0' gradientTransform='rotate(0,0.5,0.5)'%3E%3Cstop offset='0' stop-color='%230FF'/%3E%3Cstop offset='1' stop-color='%23CF6'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' x1='0' x2='0' y1='0' y2='1' gradientTransform='rotate(0,0.5,0.5)'%3E%3Cstop offset='0' stop-color='%23C7BFFF'/%3E%3Cstop offset='1' stop-color='%23DCA0BF'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%23FFF' fill-opacity='0' stroke-miterlimit='10'%3E%3Cg stroke='url(%23a)' stroke-width='3.3'%3E%3Cpath transform='translate(-43.05 -0.7999999999999998) rotate(-3.3499999999999996 1409 581) scale(0.9590309999999999)' d='M1409 581 1450.35 511 1490 581z'/%3E%3Ccircle stroke-width='1.1' transform='translate(-64.5 36) rotate(1.2999999999999998 800 450) scale(0.9999189999999999)' cx='500' cy='100' r='40'/%3E%3Cpath transform='translate(2 -22.5) rotate(3.5 401 736) scale(0.9999189999999999)' d='M400.86 735.5h-83.73c0-23.12 18.74-41.87 41.87-41.87S400.86 712.38 400.86 735.5z'/%3E%3C/g%3E%3Cg stroke='url(%23b)' stroke-width='1'%3E%3Cpath transform='translate(216 4.6000000000000005) rotate(-1.1500000000000001 150 345) scale(1.001677)' d='M149.8 345.2 118.4 389.8 149.8 434.4 181.2 389.8z'/%3E%3Crect stroke-width='2.2' transform='translate(-39.5 -99.5) rotate(-7.200000000000003 1089 759)' x='1039' y='709' width='100' height='100'/%3E%3Cpath transform='translate(-109.6 26.4) rotate(-1.200000000000001 1400 132) scale(0.905)' d='M1426.8 132.4 1405.7 168.8 1363.7 168.8 1342.7 132.4 1363.7 96 1405.7 96z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            background-attachment: fixed;
+            background-repeat: repeat-x;
+            animation: move 5s ease-in-out infinite alternate;
+        }
+
+        /* Set the aspect ratio of the player */
+        .video-js {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .video-container {
+            position: relative;
+            padding-top: 67.17%;
+            /* 1435:963 aspect ratio */
+        }
+
         .wrap {
             display: grid;
             justify-items: center;
-            background-color: #F5F7F8;
             max-width: 100%;
             font-family: "Oxygen";
         }
@@ -25,13 +60,12 @@
             grid-template-columns: 60% 1fr;
             max-width: 85%;
             min-height: 100vh;
-            padding-top: 100px;
+            padding-top: 10px;
             box-sizing: border-box;
         }
 
-        .wrap .banner .banner-left img {
-            max-width: 100%;
-            height: auto;
+        .wrap .banner .banner-left video {
+
             box-shadow: -6px 6px 20px 8px lightgray;
         }
 
@@ -85,6 +119,9 @@
             text-align: center;
             font-size: 1.5rem;
             padding: 0 50px;
+            background: whitesmoke;
+            border-radius: 15px;
+            margin-top: 39px;
         }
 
         .wrap .banner .description .notice {
@@ -98,7 +135,7 @@
             grid-gap: 25px;
             justify-self: stretch;
             padding: 80px 0;
-            background-color: #f0fbff;
+
         }
 
         .wrap .feature-section h2 {
@@ -171,7 +208,7 @@
         }
 
         .wrap .cta .cta-btn p {
-            font-size: 2.5rem;
+            font-size: 1.5rem;
             margin: 0;
         }
 
@@ -321,68 +358,96 @@
 </head>
 
 <body>
-    <div class="wrap">
-        <h2>BG Remover</h2>
-        <section class="banner">
-            <div class="banner-left">
-                <img src="https://ik.imagekit.io/developersharif/bg-remover/Screenshot_7.png?updatedAt=1679156313526"
-                    alt="" />
-            </div>
-            <div class="banner-right">
-                <img src="https://ik.imagekit.io/developersharif/bg-remover/icon.png?updatedAt=1679155330012" alt=""
-                    style="
+    <div class="svg">
+        <div class="wrap">
+
+            <h2 style="
+            font-size: xx-large;
+            font-family: sans-serif;
+            text-shadow: -3px 0px 5px #47444496;
+        ">BG Remover</h2>
+            <section class="banner">
+                <div class="banner-left">
+                    <div class="video-container">
+                        <video id="my-video" class="video-js vjs-theme-city"
+                            poster="https://ik.imagekit.io/developersharif/bg-remover/Screenshot_7.png" controls
+                            preload="auto" width="640" height="264" poster="MY_VIDEO_POSTER.jpg" data-setup="{}">
+                            <source
+                                src="https://user-images.githubusercontent.com/54396379/226102386-ede49d4e-7683-4777-be2e-104f3f335998.mp4"
+                                type="video/mp4" />
+                            <p class="vjs-no-js">
+                                To view this video please enable JavaScript, and consider upgrading to a
+                                web browser that
+                            </p>
+                        </video>
+                    </div>
+
+                </div>
+                <div class="banner-right">
+                    <img src="https://ik.imagekit.io/developersharif/bg-remover/icon.png?updatedAt=1679155330012" alt=""
+                        style="
                 height: auto;
                 width: 100px;
             " />
-                <h1>BG Remover</h1>
-                <p class="tagline">AI powered Offline Background Remover!</p>
-                <div class="btn-wrap">
-                    <div class="btn download-btn">
-                        <a href="https://github.com/developersharif/bgremover-app">Download</a>
-                    </div>
-                    <div class="btn demo-btn">
-                        <a target="_blank"
-                            href="https://user-images.githubusercontent.com/54396379/226102386-ede49d4e-7683-4777-be2e-104f3f335998.mp4">Demo</a>
+                    <h1>BG Remover</h1>
+                    <p class="tagline">AI powered Offline Background Remover!</p>
+                    <div class="btn-wrap">
+                        <div class="btn download-btn">
+                            <a href="https://github.com/developersharif/bgremover-app#bg-remover-app">Download</a>
+                        </div>
+
                     </div>
                 </div>
-            </div>
-            <div class="description">
-                <p>Our Offline AI-powered Background Remover Desktop App effortlessly removes backgrounds from any image
-                    or photo. It utilizes the latest machine learning algorithms to provide accurate results within
-                    seconds. Download now and experience the ease and efficiency of our AI-powered solution.</p>
-            </div>
-        </section>
+                <div class="description">
+                    <p>Our Offline AI-powered Background Remover Desktop App effortlessly removes backgrounds from any
+                        image
+                        or photo. It utilizes the latest machine learning algorithms to provide accurate results within
+                        seconds. Download now and experience the ease and efficiency of our AI-powered solution.</p>
+                </div>
+            </section>
 
-        <section class="feature-section">
-            <h2>Features</h2>
-            <div class="feature feature-item">
-                <i class="fa fa-magic"></i>
-                <h3>Background Remove</h3>
-                <p>Introducing our Offline AI-powered Background Remover Desktop App, featuring one-click background
-                    removal for effortless image editing.</p>
-            </div>
-            <div class="feature feature-item">
-                <i class="fa fa-clipboard""></i>
+            <section class="feature-section">
+                <h2>Features</h2>
+                <div class="feature feature-item">
+                    <i class="fa fa-magic"></i>
+                    <h3>Background Remove</h3>
+                    <p>Introducing our Offline AI-powered Background Remover Desktop App, featuring one-click background
+                        removal for effortless image editing.</p>
+                </div>
+                <div class="feature feature-item">
+                    <i class="fa fa-clipboard""></i>
                 <h3>Drag and Drop</h3>
                 <p>Simply drag and drop your image to instantly remove the background with our automatic tool</p>
             </div>
             <div class=" feature feature-item">
-                    <i class="fa fa-paint-brush"></i>
-                    <h3>Basic Editing </h3>
-                    <p> Our app also includes basic editing features, allowing you to change the background image and
-                        color.
-                        Experience the power of AI and streamline your photo editing process.</p>
-            </div>
+                        <i class="fa fa-paint-brush"></i>
+                        <h3>Basic Editing </h3>
+                        <p> Our app also includes basic editing features, allowing you to change the background image
+                            and
+                            color.
+                            Experience the power of AI and streamline your photo editing process.</p>
+                </div>
 
-        </section>
+            </section>
 
-        <section class="cta">
-            <div class="cta-btn">
-                <p>Your new home awaits!</p>
-                <a href="https://github.com/developersharif/bgremover-app">Download BG Remover Now!</a>
-            </div>
-        </section>
+            <section class="cta">
+                <div class="cta-btn">
+                    <p>Effortlessly remove backgrounds with AI precision - Download now for picture-perfect results!
+                    </p>
+                    <a href="https://github.com/developersharif/bgremover-app#bg-remover-app">Download BG Remover
+                        Now!</a>
+                </div>
+            </section>
+        </div>
     </div>
 </body>
+<script src="https://vjs.zencdn.net/8.0.4/video.min.js"></script>
+<script>
+    var player = videojs('my-video', {
+        controls: true,
+        autoplay: false,
+        preload: 'auto'
+    });
+</script>
 
 </html>
