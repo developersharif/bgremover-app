@@ -1,5 +1,5 @@
 
-## Bg-remover App
+## Bg-remover App (offline)
 | Software  | Version | Platform | Download Link |
 | --- | --- | --- | --- |
 |BG-Remover (setup)| 2.0.0 | windows | [Download](https://github.com/developersharif/bgremover-app/releases/download/v2.0.0/bg-remover-setup-2.0.0.exe) |
