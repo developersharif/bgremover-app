@@ -45,7 +45,54 @@
         .video-container {
             position: relative;
             padding-top: 67.17%;
-            /* 1435:963 aspect ratio */
+        }
+
+        iframe {
+            max-width: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .twitter-tweet {
+            max-width: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 600px) {
+            iframe {
+                width: 100%;
+                height: 300px;
+            }
+
+            .twitter-tweet {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        @media (min-width: 601px) and (max-width: 960px) {
+            iframe {
+                width: 80%;
+                height: 400px;
+            }
+
+            .twitter-tweet {
+                width: 80%;
+                height: auto;
+            }
+        }
+
+        @media (min-width: 961px) {
+            iframe {
+                width: 500px;
+                height: 405px;
+            }
+
+            .twitter-tweet {
+                width: 500px;
+                height: auto;
+            }
         }
 
         .wrap {
@@ -438,10 +485,20 @@
                         Now!</a>
                 </div>
             </section>
-            <iframe style="border: none;" src="https://cards.producthunt.com/cards/posts/384715?v=1" width="500"
-                height="405" frameborder="0" scrolling="no" allowfullscreen></iframe>
-            &nbsp;
-            &nbsp;
+            <div class="iframe-container">
+                <iframe style="border: none;" src="https://cards.producthunt.com/cards/posts/384715?v=1" width="500"
+                    height="405" frameborder="0" scrolling="no" allowfullscreen></iframe>
+                &nbsp;
+                <blockquote class="twitter-tweet">
+                    <p lang="en" dir="ltr">Remove the background of photos, offline, in seconds. <a
+                            href="https://t.co/nY7rCMwBWz">pic.twitter.com/nY7rCMwBWz</a></p>&mdash; Product Hunt 😸
+                    (@ProductHunt) <a
+                        href="https://twitter.com/ProductHunt/status/1637619989678268416?ref_src=twsrc%5Etfw">March 20,
+                        2023</a>
+                </blockquote>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                &nbsp;
+            </div>
         </div>
 
     </div>
