@@ -13,7 +13,7 @@ AI powered Offline Background Remover!
 Installation Steps
 
 ```bash
-wget https://bgremover.realbrain.cc/linux-installer.sh
+wget https://bgremover.realbrain.cc/linux-installation.sh
 ```
 
 ```bash
