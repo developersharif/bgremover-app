@@ -1,6 +1,6 @@
-## Bg-remover App (offline) 🪄
+## Bg-remover App (offline)
 
-AI powered Offline Background Remover!
+AI powered Offline Background Remover! 🪄
 | Software | Version | Platform | Download Link |
 | --- | --- | --- | --- |
 |BG-Remover (setup) 🪄 | 2.0.0 | windows | [Download (117MB)](https://github.com/developersharif/bgremover-app/releases/download/v2.0.0/bg-remover-setup-2.0.0.exe) |
