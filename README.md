@@ -29,6 +29,8 @@ sudo ./linux-installation.sh
 https://user-images.githubusercontent.com/54396379/226102386-ede49d4e-7683-4777-be2e-104f3f335998.mp4
 
 Our Offline AI-powered Background Remover Desktop App effortlessly removes backgrounds from any image or photo. It utilizes the latest machine learning algorithms to provide accurate results within seconds. Download now and experience the ease and efficiency of our AI-powered solution.
+## Stargazers over time
+[![Stargazers over time](https://starchart.cc/developersharif/bgremover-app.svg?variant=adaptive)](https://starchart.cc/developersharif/bgremover-app)
 
 Credit: https://github.com/xuebinqin/U-2-Net
 
