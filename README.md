@@ -1,5 +1,9 @@
 ## Bg-remover App (offline)
 
+## Special Announcement 🚀
+
+I have some exciting news to share! Check out my latest update on [Buy Me a Coffee](https://www.buymeacoffee.com/developersharif/exciting-news-3035459) for more details.
+
 AI powered Offline Background Remover! 🪄
 | Software | Version | Platform | Download Link |
 | --- | --- | --- | --- |
