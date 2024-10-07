@@ -222,7 +222,7 @@ video {
 .hero {
     position: relative;
     color: white;
-    padding: 100px 0;
+    padding: 80px 0;
     text-align: left;
     display: flex;
     align-items: center;
@@ -284,6 +284,15 @@ video {
     gap: 20px;
 }
 
+.hero-video {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-video .plyr {
+    border-radius: 15px;
+    overflow: hidden;
+}
 
 .btn-primary,
 .btn-secondary {
@@ -292,6 +301,11 @@ video {
     font-size: 1rem;
     font-weight: bold;
     text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
 }
 
 .btn-primary {
@@ -420,7 +434,7 @@ video {
 .how-it-works {
     background-color: #ffffff59;
     backdrop-filter: blur(8px);
-    padding: 40px 0;
+    padding: 60px 0;
 }
 
 .steps {
@@ -448,11 +462,8 @@ video {
     margin-bottom: 20px;
 }
 
-/* Testimonials Section */
 .testimonials {
-    padding: 20px 0;
-    background-color: #ffffff59;
-    backdrop-filter: blur(8px);
+    padding: 60px 0px;
 }
 
 .testimonial-grid {
@@ -462,27 +473,58 @@ video {
 }
 
 .testimonial-card {
-    background-color: var(--white);
-    border-radius: 10px;
+    background-color: #fff;
+    border-radius: 15px;
     padding: 30px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.testimonial-card img {
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.testimonial-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.testimonial-image {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    margin-bottom: 15px;
+    object-fit: cover;
+    margin-right: 15px;
 }
 
-.testimonial-card h4 {
+.testimonial-name {
     font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.testimonial-text {
+    font-style: italic;
+    color: #555;
+    line-height: 1.8;
+}
+
+.quote-icon {
+    color: var(--primary-color);
+    font-size: 2rem;
     margin-bottom: 10px;
 }
 
-.testimonial-card p {
-    font-style: italic;
-    color: #555;
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* CTA Section */
@@ -741,6 +783,15 @@ footer a:hover {
     margin: 0 !important;
 }
 
+.embed-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
 @media (max-width: 768px) {
     .review-showcase {
         padding: 10px;
@@ -753,4 +804,95 @@ footer a:hover {
     .showcase-description {
         font-size: 16px;
     }
+}
+
+
+.contact-section {
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+    margin: 10px 10px;
+}
+
+.contact-section h2 {
+    font-size: 2rem;
+    color: #2d3748;
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    color: #4a5568;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.contact-section .contact-email {
+    display: inline-block;
+    background-color: #4299e1;
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.contact-section .contact-email:hover {
+    background-color: #3182ce;
+}
+
+.contact-section .email-icon {
+    margin-right: 10px;
+}
+
+.faq-section {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+}
+
+.faq-section h2 {
+    font-size: 2rem;
+    color: #2d3748;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.faq-section .faq-item {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.faq-question {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2d3748;
+    padding: 15px 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-question::after {
+    content: '+';
+    font-size: 1.5rem;
+    color: #4299e1;
+    transition: transform 0.3s ease;
+}
+
+.faq-question.active::after {
+    transform: rotate(45deg);
+}
+
+.faq-section .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.faq-section .faq-answer p {
+    padding: 0 0 15px;
+    color: #4a5568;
 }

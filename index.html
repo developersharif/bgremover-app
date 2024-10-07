@@ -11,6 +11,11 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.3/plyr.css" />
+    <script src="https://cdn.plyr.io/3.7.3/plyr.polyfilled.js"></script>
+
 </head>
 
 <body>
@@ -59,7 +64,7 @@
                 </div>
             </div>
             <div class="hero-video">
-                <video controls
+                <video id="player" playsinline controls
                     src="https://user-images.githubusercontent.com/54396379/226102386-ede49d4e-7683-4777-be2e-104f3f335998.mp4"
                     alt="Background Removal App Interface"></video>
             </div>
@@ -67,7 +72,7 @@
     </section>
 
 
-    <section class="features" id="features">
+    <section class="features" id="features" data-aos="fade-up" data-aos-anchor-placement="ease-in-back">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Simple, Powerful, and Secure</h2>
@@ -145,7 +150,7 @@
     </section>
 
 
-    <section class="how-it-works">
+    <section class="how-it-works" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
         <div class="container">
             <h2 class="section-title">How It Works</h2>
             <div class="steps">
@@ -173,33 +178,45 @@
         </div>
     </section>
 
-    <section class="testimonials">
+    <section class="testimonials" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
         <div class="container">
             <h2 class="section-title">What Our Users Say</h2>
             <div class="testimonial-grid">
                 <div class="testimonial-card">
-                    <img src="https://picsum.photos/60/60" alt="User 1">
-                    <h4>Sarah K.</h4>
-                    <p>"This tool has saved me countless hours in my e-commerce business. The batch processing feature
-                        is a game-changer!"</p>
+                    <div class="testimonial-header">
+                        <img src="assets/images/one.jpg" alt="Sarah K." class="testimonial-image">
+                        <h4 class="testimonial-name">Sarah K.</h4>
+                    </div>
+                    <div class="quote-icon">"</div>
+                    <p class="testimonial-text">This tool has saved me countless hours in my e-commerce business. The
+                        batch processing feature is a game-changer! I can now process hundreds of product images in
+                        minutes.</p>
                 </div>
                 <div class="testimonial-card">
-                    <img src="https://picsum.photos/60/60" alt="User 2">
-                    <h4>Mark T.</h4>
-                    <p>"I'm amazed at how accurately it removes backgrounds, even with complex images. Highly
-                        recommended for any designer."</p>
+                    <div class="testimonial-header">
+                        <img src="assets/images/two.jpg" alt="Mark T." class="testimonial-image">
+                        <h4 class="testimonial-name">Mark T.</h4>
+                    </div>
+                    <div class="quote-icon">"</div>
+                    <p class="testimonial-text">I'm amazed at how accurately it removes backgrounds, even with complex
+                        images. The offline capability ensures I can work anywhere, anytime. Highly recommended for any
+                        designer.</p>
                 </div>
                 <div class="testimonial-card">
-                    <img src="https://picsum.photos/60/60" alt="User 3">
-                    <h4>Emily R.</h4>
-                    <p>"The custom background feature has opened up so many creative possibilities for my photography
-                        projects. Love it!"</p>
+                    <div class="testimonial-header">
+                        <img src="assets/images/three.jpg" alt="Emily R." class="testimonial-image">
+                        <h4 class="testimonial-name">Emily R.</h4>
+                    </div>
+                    <div class="quote-icon">"</div>
+                    <p class="testimonial-text">The custom background feature has opened up so many creative
+                        possibilities for my photography projects. The ability to process unlimited images offline is a
+                        huge time-saver. Love it!</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="pricing" id="pricing">
+    <section class="pricing" id="pricing" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
         <div class="container">
             <div class="pricing-header">
                 <h2>Choose Your Plan</h2>
@@ -217,14 +234,14 @@
                         <li>Drop File/Folder</li>
                         <li>Filters</li>
                     </ul>
-                    <button>Get Started</button>
+                    <a href="/download.html"><button>Get Started</button></a>
                 </div>
 
                 <!-- Premium Plan -->
                 <div class="pricing-card popular">
                     <div class="popular-badge">POPULAR</div>
                     <h3>Lifetime Access</h3>
-                    <div class="price">$79</div>
+                    <div class="price">$49</div>
                     <ul>
                         <li>Unlimited batch processing</li>
                         <li>Custom Watermark</li>
@@ -241,20 +258,20 @@
         </div>
     </section>
 
-    <section class="cta">
+    <section class="cta" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
         <div class="container">
             <h2>Ready to Transform Your Images?</h2>
             <a href="#" class="btn">Get Started Now</a>
         </div>
     </section>
 
-    <section class="review-showcase">
+    <section class="review-showcase" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
         <h2 class="showcase-title">What People Are Saying</h2>
         <p class="showcase-description">
             See what users and industry experts think about our BG Remover tool. From social media buzz to product
             launches, discover the impact we're making.
         </p>
-        <div class="embed-grid">
+        <div class="embed-grid" data-aos="fade-up">
             <div class="embed-item">
                 <div class="embed-header">
                     <img src="https://logo.clearbit.com/producthunt.com" alt="Product Hunt" class="embed-icon">
@@ -296,7 +313,7 @@
                         frameborder="0"></iframe>
                 </div>
             </div>
-            <div class="embed-item">
+            <!-- <div class="embed-item">
                 <div class="embed-header">
                     <i class="fa fa-globe" aria-hidden="true"></i>&nbsp;
                     <span class="embed-source">igli5</span>
@@ -305,30 +322,20 @@
                     <iframe style="border: none; width: 100%; height: 405px;"
                         src="https://www.igli5.com/2023/03/blog-post_79.html" frameborder="0"></iframe>
                 </div>
-            </div>
+            </div> -->
 
-            <div class="embed-item">
-                <div class="embed-header">
-                    <i class="fa fa-globe" aria-hidden="true"></i>&nbsp;
-                    <span class="embed-source">163</span>
-                </div>
-                <div class="embed-content">
-                    <iframe style="border: none; width: 100%; height: 405px;"
-                        src="https://www.163.com/dy/article/I2IDDFV30514SKKT.html" frameborder="0"></iframe>
-                </div>
-            </div>
-            <div class="embed-item">
+            <div class="embed-item" data-aos="fade-up">
                 <div class="embed-header">
                     <i class="fa fa-globe" aria-hidden="true"></i>&nbsp;
                     <span class="embed-source">4allprograms</span>
                 </div>
                 <div class="embed-content">
                     <iframe style="border: none; width: 100%; height: 405px;"
-                        src="https://4allprograms.me/realbrain-bg-remover/" frameborder="0"></iframe>
+                        src="https://4allprograms.me/realbrain-bg-remover/" frameborder="0" allowfullscreen></iframe>
                 </div>
             </div>
 
-            <div class="embed-item">
+            <!-- <div class="embed-item">
                 <div class="embed-header">
                     <i class="fa fa-globe" aria-hidden="true"></i>&nbsp;
                     <span class="embed-source">csdn</span>
@@ -337,8 +344,8 @@
                     <iframe style="border: none; width: 100%; height: 405px;"
                         src="https://blog.csdn.net/djstavaV/article/details/137215838" frameborder="0"></iframe>
                 </div>
-            </div>
-            <div class="embed-item">
+            </div> -->
+            <div class="embed-item" data-aos="fade-up">
                 <div class="embed-header">
                     <i class="fa fa-instagram" aria-hidden="true"></i>&nbsp;
                     <span class="embed-source">instagram</span>
@@ -442,6 +449,64 @@
             </div>
         </div>
     </section>
+
+    <div class="container" data-aos="fade-up" data-aos-anchor-placement="ease-in-back">
+        <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item" data-aos="fade-up" data-aos-anchor-placement="ease-in-back">
+                    <div class="faq-question">What is BG Remover?</div>
+                    <div class="faq-answer">
+                        <p>BG Remover is a powerful tool designed to automatically remove backgrounds from images. It
+                            uses advanced AI algorithms to accurately separate the foreground subject from the
+                            background, making it easy to create transparent or replace backgrounds in your photos.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-anchor-placement="ease-in-back">
+                    <div class="faq-question">How does BG Remover work?</div>
+                    <div class="faq-answer">
+                        <p>BG Remover uses machine learning algorithms to analyze your image and identify the main
+                            subject. It then carefully separates the subject from the background, allowing you to save
+                            the image with a transparent background or add a new background of your choice.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-anchor-placement="ease-in-back">
+                    <div class="faq-question">Is BG Remover available offline?</div>
+                    <div class="faq-answer">
+                        <p>Yes, BG Remover is available as an offline desktop application for both Windows and Linux.
+                            This allows you to remove backgrounds from your images without an internet connection,
+                            ensuring your privacy and allowing for faster processing of large batches of images.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-anchor-placement="ease-in-back">
+                    <div class="faq-question">What image formats does BG Remover support?</div>
+                    <div class="faq-answer">
+                        <p>BG Remover supports a wide range of image formats including JPG, PNG, WEBP, and TIFF. You can
+                            save your processed images with transparent backgrounds in PNG or WEBP formats.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-anchor-placement="ease-in-back">
+                    <div class="faq-question">Is there a limit to how many images I can process?</div>
+                    <div class="faq-answer">
+                        <p>With the offline version of BG Remover, there is no limit to the number of images you can
+                            process. You can use batch processing to remove backgrounds from multiple images at once,
+                            saving you time and effort.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <div class="container" data-aos="fade-up" data-aos-anchor-placement="ease-in-back" id="contact">
+        <section class="contact-section">
+            <h2>Get in Touch</h2>
+            <p>We'd love to hear from you. Send us an email and we'll respond as soon as possible.</p>
+            <a href="mailto:support@bgremover.com" class="contact-email">
+                <span class="email-icon">✉️</span>support@realbrain.cc
+            </a>
+        </section>
+    </div>
 
     <footer>
         <div class="container">
