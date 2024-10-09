@@ -133,3 +133,46 @@ document.addEventListener('DOMContentLoaded', () => {
         settings: ['captions', 'quality', 'speed', 'loop']
     });
 });
+
+
+function getAverageBrightness(videoElement) {
+    var canvas = document.createElement('canvas');
+    var context = canvas.getContext('2d');
+    canvas.width = videoElement.videoWidth;
+    canvas.height = videoElement.videoHeight;
+
+    // Draw a small portion of the video to the canvas for performance
+    context.drawImage(videoElement, 0, 0, 10, 10); // Sampling 10x10 pixels
+    var data = context.getImageData(0, 0, 10, 10).data;
+
+    var totalBrightness = 0;
+    for (var i = 0; i < data.length; i += 4) {
+        // Calculate the perceived brightness (same formula)
+        var brightness = (data[i] * 0.299 + data[i + 1] * 0.587 + data[i + 2] * 0.114);
+        totalBrightness += brightness;
+    }
+
+    // Get the average brightness
+    return totalBrightness / (data.length / 4);
+}
+
+function adjustTextColor(videoElement, textElement) {
+    const brightness = getAverageBrightness(videoElement);
+
+    if (brightness > 128) {
+        textElement.style.color = 'black';
+    } else {
+        textElement.style.color = 'white';
+    }
+}
+
+const video = document.getElementById('background-video');
+const heroContent = document.querySelector('.hero-content');
+
+video.addEventListener('loadeddata', function () {
+    adjustTextColor(video, heroContent);
+});
+
+video.addEventListener('timeupdate', function () {
+    adjustTextColor(video, heroContent);
+});

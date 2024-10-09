@@ -45,7 +45,31 @@
             </div>
         </div>
     </header>
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <div class="image-frame">
+                <svg id="flower-image" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="300" height="300" fill="#87CEEB" class="background" />
 
+                    <g transform="translate(150, 150)">
+                        <g fill="#FF69B4">
+                            <path d="M0,-80 C20,-60 20,-40 0,-20 C-20,-40 -20,-60 0,-80 Z" />
+                            <path d="M0,-80 C20,-60 20,-40 0,-20 C-20,-40 -20,-60 0,-80 Z" transform="rotate(72)" />
+                            <path d="M0,-80 C20,-60 20,-40 0,-20 C-20,-40 -20,-60 0,-80 Z" transform="rotate(144)" />
+                            <path d="M0,-80 C20,-60 20,-40 0,-20 C-20,-40 -20,-60 0,-80 Z" transform="rotate(216)" />
+                            <path d="M0,-80 C20,-60 20,-40 0,-20 C-20,-40 -20,-60 0,-80 Z" transform="rotate(288)" />
+                        </g>
+                        <circle r="20" fill="#FFFF00" />
+                    </g>
+
+                    <path d="M150,220 Q 150,280 130,300" stroke="#008000" stroke-width="6" fill="none" />
+                    <path d="M150,250 Q 180,230 190,260 Q 160,280 150,250" fill="#008000" />
+                </svg>
+                <div class="eraser"></div>
+            </div>
+            <div class="loading-text">Removing Background...</div>
+        </div>
+    </div>
     <section class="hero">
         <div class="container">
             <div class="video-background">
@@ -88,7 +112,7 @@
                     <h3>Batch Processing</h3>
                     <p>Remove backgrounds from multiple images at once, saving you time and effort.</p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card" data-aos="fade-up" data-aos-anchor-placement="ease-in-back">
                     <div class="feature-icon">
                         <dotlottie-player src="https://lottie.host/a593b00a-7bd9-4a21-bc64-6dbf8de38502/OhtWb7RO6W.json"
                             background="transparent" speed="1" style="width: 300px; height: 300px;" loop
@@ -97,7 +121,7 @@
                     <h3>AI-Powered</h3>
                     <p>Our smart AI accurately removes backgrounds, even from complex images.</p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card" data-aos="fade-up" data-aos-anchor-placement="ease-in-back">
                     <div class="feature-icon">
                         <dotlottie-player src="https://lottie.host/37942395-7d47-414e-9133-9816d49df7a6/8jQkSThWzB.json"
                             background="transparent" speed="1" style="width: 300px; height: 300px;" loop
@@ -106,7 +130,7 @@
                     <h3>Custom Backgrounds</h3>
                     <p>Add new backgrounds to your images with just a few clicks.</p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card" data-aos="fade-up" data-aos-anchor-placement="ease-in-back">
                     <div class="feature-icon">
                         <dotlottie-player src="https://lottie.host/10b6933e-8bc7-427d-b403-1edca8358a58/zMKQ15G1Hc.json"
                             background="transparent" speed="1" style="width: 300px; height: 300px;" loop
@@ -115,7 +139,7 @@
                     <h3>High-Quality Results</h3>
                     <p>Get clear, professional results with support for images up to 25MP.</p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card" data-aos="fade-up" data-aos-anchor-placement="ease-in-back">
                     <div class="feature-icon">
                         <dotlottie-player src="https://lottie.host/39df1665-cead-4b63-afba-3ad224db279e/oLAGFNKb2c.json"
                             background="transparent" speed="1" style="width: 300px; height: 300px;" loop
@@ -124,8 +148,7 @@
                     <h3>100% Offline &amp; Secure</h3>
                     <p>Your images never leave your computer. Process locally for complete privacy.</p>
                 </div>
-                <!-- New feature card for basic editing tools -->
-                <div class="feature-card">
+                <div class="feature-card" data-aos="fade-up" data-aos-anchor-placement="ease-in-back">
                     <div class="feature-icon">
                         <dotlottie-player src="https://lottie.host/c40e2580-f22b-4a91-8270-ce830ca4a7c9/5M3rWuOlxR.json"
                             background="transparent" speed="1" style="width: 300px; height: 300px;" loop
@@ -135,8 +158,7 @@
                     <p>Zoom, erase, crop, apply filters, and customize size effortlessly. Super easy to use for anyone!
                     </p>
                 </div>
-                <!-- New feature card for professional quality -->
-                <div class="feature-card">
+                <div class="feature-card" data-aos="fade-up" data-aos-anchor-placement="ease-in-back">
                     <div class="feature-icon">
                         <dotlottie-player src="https://lottie.host/a9ac615d-264e-4f9c-a343-f319c71b3310/cj2PF0UnSC.json"
                             background="transparent" speed="1" style="width: 300px; height: 300px;" loop
@@ -153,23 +175,23 @@
     <section class="how-it-works" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
         <div class="container">
             <h2 class="section-title">How It Works</h2>
-            <div class="steps">
-                <div class="step">
+            <div class="steps" data-aos="fade-up" data-aos-anchor-placement="ease-in-back">
+                <div class="step" data-aos="fade-up" data-aos-anchor-placement="ease-in-back">
                     <div class="step-number">1</div>
                     <h3>Select</h3>
                     <p>Select a image or folder you want to remove background.</p>
                 </div>
-                <div class="step">
+                <div class="step" data-aos="fade-up" data-aos-anchor-placement="ease-in-back">
                     <div class="step-number">2</div>
                     <h3>Process</h3>
                     <p>Our AI automatically removes the background in seconds.</p>
                 </div>
-                <div class="step">
+                <div class="step" data-aos="fade-up" data-aos-anchor-placement="ease-in-back">
                     <div class="step-number">3</div>
                     <h3>Customize<sup style="font-size: 10px;">(Optional)</sup></h3>
                     <p>Fine-tune the result or add a new background if desired.</p>
                 </div>
-                <div class="step">
+                <div class="step" data-aos="fade-up" data-aos-anchor-placement="ease-in-back">
                     <div class="step-number">4</div>
                     <h3>Save</h3>
                     <p>Save your edited image in your preferred format.</p>
@@ -181,7 +203,7 @@
     <section class="testimonials" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
         <div class="container">
             <h2 class="section-title">What Our Users Say</h2>
-            <div class="testimonial-grid">
+            <div class="testimonial-grid" data-aos="fade-up" data-aos-anchor-placement="ease-in-back">
                 <div class="testimonial-card">
                     <div class="testimonial-header">
                         <img src="assets/images/one.jpg" alt="Sarah K." class="testimonial-image">
@@ -261,7 +283,7 @@
     <section class="cta" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
         <div class="container">
             <h2>Ready to Transform Your Images?</h2>
-            <a href="#" class="btn">Get Started Now</a>
+            <a href="/download.html" class="btn">Get Started Now</a>
         </div>
     </section>
 
@@ -313,16 +335,6 @@
                         frameborder="0"></iframe>
                 </div>
             </div>
-            <!-- <div class="embed-item">
-                <div class="embed-header">
-                    <i class="fa fa-globe" aria-hidden="true"></i>&nbsp;
-                    <span class="embed-source">igli5</span>
-                </div>
-                <div class="embed-content">
-                    <iframe style="border: none; width: 100%; height: 405px;"
-                        src="https://www.igli5.com/2023/03/blog-post_79.html" frameborder="0"></iframe>
-                </div>
-            </div> -->
 
             <div class="embed-item" data-aos="fade-up">
                 <div class="embed-header">
@@ -463,6 +475,24 @@
                     </div>
                 </div>
                 <div class="faq-item" data-aos="fade-up" data-aos-anchor-placement="ease-in-back">
+                    <div class="faq-question">Why do I need an offline background remover tool?</div>
+                    <div class="faq-answer">
+                        <p>Using an offline background remover tool ensures complete privacy and security for your
+                            images, as they never leave your computer. Whether you're a photographer, designer, or
+                            business owner, you can batch process multiple images without any data privacy concerns,
+                            saving time and ensuring high-quality results.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-anchor-placement="ease-in-back">
+                    <div class="faq-question">How does this tool improve my workflow?</div>
+                    <div class="faq-answer">
+                        <p>The ability to process multiple images at once with batch processing saves significant time,
+                            especially if you're working on projects that involve large numbers of photos. Additionally,
+                            with AI-powered precision, you can trust that even complex images will have clean,
+                            professional background removal, allowing you to focus on more creative tasks.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-anchor-placement="ease-in-back">
                     <div class="faq-question">How does BG Remover work?</div>
                     <div class="faq-answer">
                         <p>BG Remover uses machine learning algorithms to analyze your image and identify the main
@@ -493,6 +523,25 @@
                             saving you time and effort.</p>
                     </div>
                 </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-anchor-placement="ease-in-back">
+                    <div class="faq-question">How does this tool compare to online alternatives?</div>
+                    <div class="faq-answer">
+                        <p>Unlike online services that require internet access and may compromise your privacy by
+                            uploading images to the cloud, this tool works entirely offline, providing full control over
+                            your files. It is also faster for batch processing as there's no need to wait for uploads or
+                            downloads.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-anchor-placement="ease-in-back">
+                    <div class="faq-question">Is the background removal always 100% accurate?</div>
+                    <div class="faq-answer">
+                        <p>While our AI-powered tool is highly accurate and performs exceptionally well on most images,
+                            there may be occasional instances where complex backgrounds or edges require manual
+                            adjustment. In such cases, we provide easy-to-use editing tools like zoom, erase, and crop
+                            to help you fine-tune your images quickly. Our goal is to offer both speed and flexibility
+                            so you can achieve professional results with minimal effort.</p>
+                    </div>
+                </div>
             </div>
         </section>
     </div>
@@ -516,6 +565,19 @@
         </div>
     </footer>
     <script src="assets/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            setTimeout(function () {
+                // Remove the preloader
+                const preloader = document.getElementById('preloader');
+                preloader.style.opacity = '0';
+                preloader.style.transition = 'opacity 0.5s ease';
+
+                preloader.remove();
+
+            }, 1200);
+        });
+    </script>
 </body>
 
 </html>
