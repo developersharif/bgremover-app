@@ -115,20 +115,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const player = new Plyr('#player', {
         controls: [
             'play-large',
-            'restart',
-            'rewind',
+            // 'restart',
+            // 'rewind',
             'play',
             'fast-forward',
             'progress',
             'current-time',
-            'duration',
+            // 'duration',
             'mute', // Toggle mute
             'volume', // Volume control
             // 'captions', // Toggle captions
             'settings', // Settings menu
             'pip', // Picture-in-picture (currently Safari only)
             // 'airplay', // Airplay (currently Safari only)
-            'fullscreen' // Toggle fullscreen
+            // 'fullscreen' // Toggle fullscreen
         ],
         settings: ['captions', 'quality', 'speed', 'loop']
     });
