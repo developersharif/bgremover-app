@@ -5,13 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Download BG Remover for pc - Free & Premium Versions</title>
-
+    <link rel="icon" href="assets/images/logo.png" type="image/png">
+    <meta name="keywords"
+        content="remove image background, bg remover, offline tool, free background remover, remove bg offline, remove bg for pc">
+    <meta name="description"
+        content="Remove image background with our 100% free, offline,  and easy-to-use tool. Say goodbye to complex online tools and edit images effortlessly with our offline background remover. Try it now for quick and professional-looking photo editing.">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <meta property="og:title" content="AI powered Offline Background Remover!">
+    <meta property="og:description"
+        content="Effortlessly remove backgrounds with AI precision - Download now for picture-perfect results!">
+    <meta property="og:image" content="https://ik.imagekit.io/developersharif/bg-remover/Screenshot_7.png">
+    <meta property="og:url" content="https://developersharif.github.io/bgremover-app">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI powered Offline Background Remover!">
+    <meta name="twitter:description"
+        content="Effortlessly remove backgrounds with AI precision - Download now for picture-perfect results!">
+    <meta name="twitter:image" content="https://ik.imagekit.io/developersharif/bg-remover/Screenshot_7.png">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C0TVJ4BWV1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
+        gtag('config', 'G-C0TVJ4BWV1');
+    </script>
     <style>
         * {
             box-sizing: border-box;
@@ -290,6 +312,38 @@
         .premium-button:hover {
             background-color: #38a169;
         }
+
+
+        ul {
+            list-style: none;
+            padding-left: 20px;
+        }
+
+        code {
+            display: block;
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .step {
+            margin-bottom: 20px;
+        }
+
+        .step-title {
+            font-size: 1.2em;
+            color: #34495e;
+            margin-bottom: 10px;
+        }
+
+        .linux-setup {
+            background-color: white;
+            text-align: center;
+            padding: 5px;
+            border-radius: 10px;
+        }
     </style>
 </head>
 
@@ -331,7 +385,7 @@
                 <h2>Windows</h2>
                 <p>Compatible with Windows 7, 8, 10, and 11</p>
                 <select class="version-select" id="windows-version">
-                    <option value="3.0">Version 3.0</option>
+                    <!-- <option value="3.0">Version 3.0</option> -->
                     <option value="2.0">Version 2.0</option>
                     <option value="1.0">Version 1.0</option>
                 </select>
@@ -341,7 +395,7 @@
                 <h2>Linux</h2>
                 <p>For Ubuntu, Fedora, and more</p>
                 <select class="version-select" id="linux-version">
-                    <option value="3.0">Version 3.0</option>
+                    <!-- <option value="3.0">Version 3.0</option> -->
                     <option value="2.0">Version 2.0</option>
                     <option value="1.0">Version 1.0</option>
                 </select>
@@ -349,25 +403,44 @@
             </div>
         </div>
 
-        <div class="premium-section" data-aos="fade-down">
+        <div class="linux-setup">
+            <h2>Linux Installation Guide</h2>
+            <ul>
+                <li class="step">
+                    <div class="step-title">Step 1: Download the Installation Script</div>
+                    <code>wget https://bgremover.realbrain.cc/linux-installation.sh</code>
+                </li>
+                <li class="step">
+                    <div class="step-title">Step 2: Make the Script Executable</div>
+                    <code>chmod +x linux-installation.sh</code>
+                </li>
+                <li class="step">
+                    <div class="step-title">Step 3: Run the Installation Script</div>
+                    <code>sudo ./linux-installation.sh</code>
+                </li>
+            </ul>
+        </div>
+
+        <div class="premium-section" data-aos="fade-down" id="premium">
             <h2>Unlock Unlimited Potential with Premium</h2>
             <p>Upgrade to our Premium version for unlimited batch processing, advanced customization options, and
                 priority support. Remove backgrounds faster and more efficiently than ever before!</p>
-            <a href="#" class="premium-button">Go Premium - Only $49 Lifetime Access</a>
+            <!-- <a href="#" class="premium-button">Go Premium - Only $49 Lifetime Access</a> -->
+            <a href="#" class="premium-button">Comming soon!</a>
         </div>
     </div>
 
     <script>
         const downloadLinks = {
             windows: {
-                '3.0': 'https://example.com/downloads/windows/bg-remover-win-3.0.exe',
-                '2.0': 'https://example.com/downloads/windows/bg-remover-win-2.0.exe',
-                '1.0': 'https://example.com/downloads/windows/bg-remover-win-1.0.exe'
+                // '3.0': 'https://example.com/downloads/windows/bg-remover-win-3.0.exe',
+                '2.0': 'https://github.com/developersharif/bgremover-app/releases/download/v2.0.0/bg-remover-setup-2.0.0.exe',
+                '1.0': 'https://github.com/developersharif/bgremover-app/releases/download/v1.1.2/BG-Remover.exe'
             },
             linux: {
-                '3.0': 'https://example.com/downloads/linux/bg-remover-linux-3.0.tar.gz',
-                '2.0': 'https://example.com/downloads/linux/bg-remover-linux-2.0.tar.gz',
-                '1.0': 'https://example.com/downloads/linux/bg-remover-linux-1.0.tar.gz'
+                // '3.0': 'https://example.com/downloads/linux/bg-remover-linux-3.0.tar.gz',
+                '2.0': 'https://github.com/developersharif/bgremover-app/releases/download/v2.0.0/bg-remover-linux.Remover',
+                '1.0': 'https://github.com/developersharif/bgremover-app/releases/download/v1.0.0/BG.Remover'
             }
         };
 
@@ -376,8 +449,6 @@
             const downloadUrl = downloadLinks.windows[version];
             if (downloadUrl) {
                 window.location.href = downloadUrl;
-            } else {
-                alert(`Download link for Windows version ${version} not found.`);
             }
         }
 
@@ -386,8 +457,6 @@
             const downloadUrl = downloadLinks.linux[version];
             if (downloadUrl) {
                 window.location.href = downloadUrl;
-            } else {
-                alert(`Download link for Linux version ${version} not found.`);
             }
         }
     </script>
