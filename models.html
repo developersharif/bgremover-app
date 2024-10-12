@@ -130,42 +130,78 @@
         <div class="models-grid">
             <div class="model-card">
                 <h2>u2net</h2>
-                <p>The original U^2-Net model, suitable for general-purpose background removal.</p>
+                <p>A pre-trained model for general use cases.</p>
                 <div class="model-info">
-                    <span>Size: 176 MB</span>
+                    <span>Size: 167 MB</span>
                     <span>Version: 1.0</span>
                 </div>
-                <a href="#" class="download-button">Download u2net</a>
+                <a href="https://github.com/developersharif/bgremover-app/releases/download/u2net/u2net.onnx"
+                    class="download-button">Download u2net</a>
+            </div>
+            <div class="model-card">
+                <h2>silueta</h2>
+                <p>Same as u2net but the size is reduced to 43Mb.</p>
+                <div class="model-info">
+                    <span>Size: 43 MB</span>
+                    <span>Version: 1.0</span>
+                </div>
+                <a href="https://github.com/developersharif/bgremover-app/releases/download/silueta/silueta.onnx"
+                    class="download-button">Download u2net</a>
             </div>
 
             <div class="model-card">
-                <h2>u2netp</h2>
-                <p>A lighter version of U^2-Net, ideal for faster processing on less powerful hardware.</p>
+                <h2>birefnet-general-lite </h2>
+                <p>A light pre-trained model for general use cases.</p>
                 <div class="model-info">
-                    <span>Size: 4 MB</span>
+                    <span>Size: 213.63 MB</span>
                     <span>Version: 1.0</span>
                 </div>
-                <a href="#" class="download-button">Download u2netp</a>
+                <a href="https://github.com/developersharif/bgremover-app/releases/download/birefnet-general-lite/BiRefNet-general-bb_swin_v1_tiny-epoch_232.onnx"
+                    class="download-button">Download u2netp</a>
             </div>
 
             <div class="model-card">
                 <h2>u2net_human_seg</h2>
-                <p>Specialized model for human segmentation, perfect for portrait photos.</p>
+                <p>A pre-trained model for Cloths Parsing from human portrait. Here clothes are parsed into 3 category:
+                    Upper body, Lower body and Full body.</p>
                 <div class="model-info">
-                    <span>Size: 176 MB</span>
+                    <span>Size: 167.84 MB</span>
                     <span>Version: 1.0</span>
                 </div>
-                <a href="#" class="download-button">Download u2net_human_seg</a>
+                <a href="https://github.com/developersharif/bgremover-app/releases/download/u2net_human_seg/u2net_human_seg.onnx"
+                    class="download-button">Download u2net_human_seg</a>
             </div>
 
             <div class="model-card">
                 <h2>u2net_cloth_seg</h2>
-                <p>Focused on clothing segmentation, great for fashion and e-commerce applications.</p>
+                <p>A pre-trained model for Cloths Parsing from human portrait. Here clothes.</p>
                 <div class="model-info">
-                    <span>Size: 176 MB</span>
+                    <span>Size: 168.03 MB</span>
                     <span>Version: 1.0</span>
                 </div>
-                <a href="#" class="download-button">Download u2net_cloth_seg</a>
+                <a href="https://github.com/developersharif/bgremover-app/releases/download/u2net_cloth_seg/u2net_cloth_seg.onnx"
+                    class="download-button">Download u2net_human_seg</a>
+            </div>
+
+            <div class="model-card">
+                <h2>isnet-anime</h2>
+                <p>A high-accuracy segmentation for anime characters.</p>
+                <div class="model-info">
+                    <span>Size:167.91 MB</span>
+                    <span>Version: 1.0</span>
+                </div>
+                <a href="https://github.com/developersharif/bgremover-app/releases/download/isnet-anime/isnet-anime.onnx"
+                    class="download-button">Download u2net_cloth_seg</a>
+            </div>
+            <div class="model-card">
+                <h2>BiRefNet-general-bb</h2>
+                <p>A light pre-trained model for general use cases.</p>
+                <div class="model-info">
+                    <span>Size:213 MB</span>
+                    <span>Version: 1.0</span>
+                </div>
+                <a href="https://github.com/developersharif/bgremover-app/releases/download/BiRefNet-general-bb_swin_v1_tiny-epoch_232/BiRefNet-general-bb_swin_v1_tiny-epoch_232.onnx"
+                    class="download-button">Download u2net_cloth_seg</a>
             </div>
         </div>
 
@@ -173,7 +209,8 @@
             <h2>How to Use These Models</h2>
             <p>1. Download the desired ONNX model.</p>
             <p>2. Place the downloaded model file in the appropriate directory of your BG Remover installation.</p>
-            <p>3. In the BG Remover settings, select the model you wish to use for background removal.</p>
+            <p>3. In the BG Remover Model <b>Settings>Chose Custom Model>yes>save</b>, select the model you wish to use
+                for background removal.</p>
             <p>4. Experiment with different models to find the best one for your specific use case.</p>
             <p>Note: The premium version of BG Remover allows for easy switching between models and provides optimized
                 settings for each.</p>
