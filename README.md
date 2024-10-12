@@ -1,12 +1,10 @@
 ## Bg-remover App (offline)
 
-## Special Announcement 🚀
-
-I have some exciting news to share! Check out my latest update on [Buy Me a Coffee](https://www.buymeacoffee.com/developersharif/exciting-news-3035459) for more details.
 
 AI powered Offline Background Remover! 🪄
 | Software | Version | Platform | Download Link |
 | --- | --- | --- | --- |
+|BG-Remover (setup) with embeded model 🪟 | 3.0.0 | windows | [Download (168MB)](https://buymeacoffee.com/developersharif/extras) |
 |BG-Remover (setup) ⊞ | 2.0.0 | windows | [Download (117MB)](https://github.com/developersharif/bgremover-app/releases/download/v2.0.0/bg-remover-setup-2.0.0.exe) |
 |BG-Remover 🐧 | 2.0.0 | Linux | [Download (137MB)](https://github.com/developersharif/bgremover-app/releases/download/v2.0.0/bg-remover-linux.Remover) |
 | BG-Remover(Stable) | 1.1.2 | Windows | [Download (123MB)](https://github.com/developersharif/bgremover-app/releases/download/v1.1.2/BG-Remover.exe) |
