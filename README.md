@@ -28,7 +28,11 @@ chmod +x  linux-installation.sh
 sudo ./linux-installation.sh
 ```
 
-https://user-images.githubusercontent.com/54396379/226102386-ede49d4e-7683-4777-be2e-104f3f335998.mp4
+
+
+https://github.com/user-attachments/assets/5fc6db6b-acb9-4850-833e-c4c1242b0d34
+
+
 
 Our Offline AI-powered Background Remover Desktop App effortlessly removes backgrounds from any image or photo. It utilizes the latest machine learning algorithms to provide accurate results within seconds. Download now and experience the ease and efficiency of our AI-powered solution.
 ## Stargazers over time
