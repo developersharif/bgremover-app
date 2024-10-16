@@ -8,5 +8,3 @@ Sitemap: https://bgremover.realbrain.cc/sitemap.xml
 
 User-agent: Googlebot
 Allow: /
-
-Crawl-delay: 10
