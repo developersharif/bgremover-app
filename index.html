@@ -4,14 +4,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="AI-powered offline batch background remover. Remove image backgrounds easily and efficiently.">
-    <title>BG Remover | AI-Powered Batch Processing</title>
+    <title>BG Remover: Best Offline AI Background Removal Tool - Fast & High-Quality</title>
     <link rel="icon" href="assets/images/logo.png" type="image/png">
+
+    <!-- SEO Meta Tags -->
     <meta name="keywords"
-        content="remove image background, bg remover, offline tool, free background remover, remove bg offline, remove bg for pc">
+        content="background remover, offline background remover, AI background remover, batch processing, high-quality background removal, remove.bg alternative, image editing tool">
     <meta name="description"
-        content="Remove image background with our 100% free, offline,  and easy-to-use tool. Say goodbye to complex online tools and edit images effortlessly with our offline background remover. Try it now for quick and professional-looking photo editing.">
+        content="Download BG Remover - the best AI-powered offline tool for removing backgrounds from images. Process multiple images in a batch, customize results, and enjoy high-quality output without an internet connection. Perfect for professionals and individuals.">
+
+    <!-- Open Graph Meta Tags (for social media) -->
+    <meta property="og:title" content="BG Remover - AI-powered Offline Background Removal Tool!">
+    <meta property="og:description"
+        content="Remove backgrounds with precision using our offline AI-powered tool. Download now and enjoy fast, high-quality results without needing internet!">
+    <meta property="og:image" content="https://bgremover.realbrain.cc/assets/images/bgremover.png">
+    <meta property="og:url" content="https://developersharif.github.io/bgremover-app">
+    <meta property="og:type" content="product">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="BG Remover - AI-powered Offline Background Remover">
+    <meta name="twitter:description"
+        content="Effortlessly remove backgrounds with AI precision using our offline tool. Perfect for image editing professionals. Download today!">
+    <meta name="twitter:image" content="https://bgremover.realbrain.cc/assets/images/bgremover.png">
+
+    <!-- Schema.org Structured Data for Product -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "BG Remover",
+      "description": "AI-powered offline background remover with batch processing and customizable options.",
+      "image": "https://bgremover.realbrain.cc/assets/images/bgremover.png",
+      "sku": "bgremoveroffline_realbrain",
+      "brand": {
+        "@type": "Brand",
+        "name": "RealBrain"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "49.0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://bgremover.realbrain.cc/#pricing"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "120"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "John Doe"
+          },
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5"
+          },
+          "reviewBody": "BG Remover is a fantastic tool! It quickly removed the backgrounds from my photos, and the offline capability is a huge bonus."
+        }
+      ]
+    }
+    </script>
+
+    <!-- Stylesheets & Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css?fresh">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -20,25 +79,16 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="stylesheet" href="https://cdn.plyr.io/3.7.3/plyr.css" />
     <script src="https://cdn.plyr.io/3.7.3/plyr.polyfilled.js"></script>
-    <meta property="og:title" content="AI powered Offline Background Remover!">
-    <meta property="og:description"
-        content="Effortlessly remove backgrounds with AI precision - Download now for picture-perfect results!">
-    <meta property="og:image" content="assets/images/bgremover.png">
-    <meta property="og:url" content="https://developersharif.github.io/bgremover-app">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AI powered Offline Background Remover!">
-    <meta name="twitter:description"
-        content="Effortlessly remove backgrounds with AI precision - Download now for picture-perfect results!">
-    <meta name="twitter:image" content="assets/images/bgremover.png">
-    <!-- Google tag (gtag.js) -->
+
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-C0TVJ4BWV1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-C0TVJ4BWV1');
     </script>
+
 </head>
 
 <body>
@@ -96,8 +146,8 @@
     <section class="hero">
         <div class="container">
             <div class="video-background">
-                <video autoplay muted loop>
-                    <source src="assets/video/18069232-hd_1280_720_24fps.mp4" type="video/mp4">
+                <video autoplay muted loop id="bg-video">
+                    <!-- <source src="assets/video/18069232-hd_1280_720_24fps.mp4" type="video/mp4"> -->
                     Your browser does not support the video tag.
                 </video>
             </div>

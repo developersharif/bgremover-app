@@ -112,6 +112,10 @@ document.querySelectorAll('.faq-question').forEach(question => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
+    const video = document.getElementById('bg-video');
+    video.innerHTML = '<source src="assets/video/18069232-hd_1280_720_24fps.mp4" type="video/mp4">';
+    video.load();
+    video.play();
     const player = new Plyr('#player', {
         controls: [
             'play-large',
@@ -132,6 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ],
         settings: ['captions', 'quality', 'speed', 'loop']
     });
+    player.poster = 'https://bgremover.realbrain.cc/assets/images/bgremover.png';
 });
 
 
