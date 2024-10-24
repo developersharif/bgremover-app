@@ -42,13 +42,45 @@
         "name": "RealBrain"
       },
       "offers": {
-        "@type": "Offer",
-        "price": "49.0",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock",
-        "url": "https://bgremover.realbrain.cc/#pricing"
+  "@type": "Offer",
+  "price": "49.0",
+  "priceCurrency": "USD",
+  "availability": "https://schema.org/InStock",
+  "url": "https://bgremover.realbrain.cc/#pricing",
+  "priceValidUntil": "2025-12-31",
+  "hasMerchantReturnPolicy": {
+    "@type": "MerchantReturnPolicy",
+    "returnPolicyCategory": "https://schema.org/NoRefund"
+  },
+  "shippingDetails": {
+    "@type": "OfferShippingDetails",
+    "shippingRate": {
+      "@type": "MonetaryAmount",
+      "value": "0.0",
+      "currency": "USD"
+    },
+    "deliveryTime": {
+      "@type": "ShippingDeliveryTime",
+      "handlingTime": {
+        "@type": "QuantitativeValue",
+        "minValue": 0,
+        "maxValue": 1,
+        "unitCode": "HOUR"
       },
-      "aggregateRating": {
+      "transitTime": {
+        "@type": "QuantitativeValue",
+        "minValue": 0,
+        "maxValue": 1,
+        "unitCode": "HOUR"
+      }
+    },
+    "shippingDestination": {
+      "@type": "DefinedRegion",
+      "name": "Worldwide"
+    }
+  }
+},
+        "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.8",
         "reviewCount": "120"
