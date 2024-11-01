@@ -111,11 +111,23 @@ document.querySelectorAll('.faq-question').forEach(question => {
     });
 });
 
+const removePreloadColors = () => {
+    const heroTitle = document.querySelector(".hero-content h1");
+    const heroParagraph = document.querySelector(".hero-content p");
+
+    heroTitle.classList.remove("preload-head-color")
+    heroParagraph.classList.remove("preload-head-color")
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     const video = document.getElementById('bg-video');
     video.innerHTML = '<source src="assets/video/18069232-hd_1280_720_24fps.mp4" type="video/mp4">';
     video.load();
-    video.play();
+    video.addEventListener('loadeddata', () => {
+        video.play();
+        removePreloadColors();
+    });
+
     const player = new Plyr('#player', {
         controls: [
             'play-large',

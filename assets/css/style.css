@@ -175,7 +175,7 @@ video {
   }
 
   /* Hamburger active state */
-  .hamburger-menu.active + .navbar ul {
+  .hamburger-menu.active+.navbar ul {
     display: flex;
   }
 
@@ -570,6 +570,7 @@ footer a:hover {
 
 /* Media Queries */
 @media screen and (max-width: 768px) {
+
   .feature-text,
   .feature-image {
     flex-basis: 100%;
@@ -926,11 +927,9 @@ footer a:hover {
   left: -50px;
   width: 50px;
   height: 100%;
-  background: linear-gradient(
-    to right,
-    rgba(240, 240, 240, 0.1),
-    rgba(240, 240, 240, 0.9)
-  );
+  background: linear-gradient(to right,
+      rgba(240, 240, 240, 0.1),
+      rgba(240, 240, 240, 0.9));
   animation: erase 2s linear infinite;
 }
 
@@ -960,6 +959,7 @@ footer a:hover {
 }
 
 @keyframes fadeOut {
+
   0%,
   25% {
     opacity: 1;
