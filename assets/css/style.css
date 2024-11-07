@@ -175,7 +175,7 @@ video {
   }
 
   /* Hamburger active state */
-  .hamburger-menu.active+.navbar ul {
+  .hamburger-menu.active + .navbar ul {
     display: flex;
   }
 
@@ -570,7 +570,6 @@ footer a:hover {
 
 /* Media Queries */
 @media screen and (max-width: 768px) {
-
   .feature-text,
   .feature-image {
     flex-basis: 100%;
@@ -927,9 +926,11 @@ footer a:hover {
   left: -50px;
   width: 50px;
   height: 100%;
-  background: linear-gradient(to right,
-      rgba(240, 240, 240, 0.1),
-      rgba(240, 240, 240, 0.9));
+  background: linear-gradient(
+    to right,
+    rgba(240, 240, 240, 0.1),
+    rgba(240, 240, 240, 0.9)
+  );
   animation: erase 2s linear infinite;
 }
 
@@ -959,7 +960,6 @@ footer a:hover {
 }
 
 @keyframes fadeOut {
-
   0%,
   25% {
     opacity: 1;
@@ -983,4 +983,53 @@ footer a:hover {
   color: #666;
   font-weight: normal;
   margin: 0;
+}
+
+.bf-discount-banner {
+  background-color: #ff5722;
+  color: #ffffff;
+  padding: 15px 10px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Space between text and button */
+  flex-wrap: wrap; /* Ensures wrapping on smaller screens */
+}
+
+.bf-discount-text {
+  display: inline-block;
+  font-size: 1rem;
+}
+
+.bf-buy-now-btn {
+  background-color: #ffffff;
+  color: #ff5722;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.bf-buy-now-btn:hover {
+  background-color: #ff784e;
+  color: #ffffff;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 600px) {
+  .bf-discount-banner {
+    flex-direction: column; /* Stack items vertically on small screens */
+    font-size: 1rem;
+  }
+
+  .bf-discount-text,
+  .bf-buy-now-btn {
+    width: 100%; /* Full-width for text and button on mobile */
+    text-align: center;
+    margin: 5px 0;
+  }
 }
