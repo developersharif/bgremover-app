@@ -746,7 +746,6 @@ footer a:hover {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   height: 400px;
-  /* Define height for each embed item */
 }
 
 .embed-item:hover {
@@ -784,8 +783,6 @@ footer a:hover {
 
 .embed-content iframe {
   width: 100% !important;
-  height: 100% !important;
-  /* Make iframe take the full height */
   border: none;
   display: block;
 }

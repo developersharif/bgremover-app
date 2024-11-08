@@ -1,114 +1,118 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const hamburger = document.querySelector(".hamburger-menu");
-    const navbar = document.querySelector(".navbar ul");
+// document.addEventListener("DOMContentLoaded", function () {
+//     const hamburger = document.querySelector(".hamburger-menu");
+//     const navbar = document.querySelector(".navbar ul");
 
-    hamburger.addEventListener("click", function () {
-        navbar.classList.toggle("active");
-        hamburger.classList.toggle("active");
-    });
+//     hamburger.addEventListener("click", function () {
+//         navbar.classList.toggle("active");
+//         hamburger.classList.toggle("active");
+//     });
 
-    document.querySelectorAll('.navbar ul li a').forEach(link => {
-        link.addEventListener('click', function () {
-            navbar.classList.remove('active');
-            hamburger.classList.remove('active');
-        });
-    });
-});
+//     document.querySelectorAll('.navbar ul li a').forEach(link => {
+//         link.addEventListener('click', function () {
+//             navbar.classList.remove('active');
+//             hamburger.classList.remove('active');
+//         });
+//     });
+// });
 
 
-const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-svg.setAttribute("width", "100%");
-svg.setAttribute("height", "100%");
-svg.style.position = "fixed";
-svg.style.top = "0";
-svg.style.left = "0";
-svg.style.zIndex = "-1";
+// Create SVG Element for Background Shapes
+const svgBackground = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+svgBackground.setAttribute("width", "100%");
+svgBackground.setAttribute("height", "100%");
+svgBackground.style.position = "fixed";
+svgBackground.style.top = "0";
+svgBackground.style.left = "0";
+svgBackground.style.zIndex = "-1";
 
+// Set a neutral background color for contrast
 document.body.style.backgroundColor = "#f0f0f0";
 
-const shapeTypes = ["rect", "circle", "polygon"];
+const MAX_SHAPES = 50;
+const shapes = [];
+const shapeTypes = ["rect", "circle", "polygon"]; // Define shape types
 
-function randomColor() {
-    return `hsl(${Math.random() * 360}, 70%, 70%)`;
+// Function to generate random HSL colors for a soft color palette
+function getRandomColor() {
+  return `hsl(${Math.random() * 360}, 70%, 85%)`;
 }
 
+// Create and style each shape element
 function createShape() {
-    const shape = document.createElementNS("http://www.w3.org/2000/svg", shapeTypes[Math.floor(Math.random() * shapeTypes.length)]);
-    const size = Math.random() * 50 + 10;
+  const shapeType = shapeTypes[Math.floor(Math.random() * shapeTypes.length)];
+  const shape = document.createElementNS("http://www.w3.org/2000/svg", shapeType);
+  const size = Math.random() * 40 + 15; // Random size for variety
+  shape.setAttribute("fill", getRandomColor());
+  shape.setAttribute("opacity", "0.6");
 
-    shape.setAttribute("fill", randomColor());
-    shape.setAttribute("opacity", "0.5");
+  if (shapeType === "rect") {
+    shape.setAttribute("width", size);
+    shape.setAttribute("height", size);
+  } else if (shapeType === "circle") {
+    shape.setAttribute("r", size / 2);
+  } else if (shapeType === "polygon") {
+    const points = Array.from({ length: 3 }, () => `${Math.random() * size},${Math.random() * size}`);
+    shape.setAttribute("points", points.join(" "));
+  }
 
-    if (shape.tagName === "rect") {
-        shape.setAttribute("width", size);
-        shape.setAttribute("height", size);
-    } else if (shape.tagName === "circle") {
-        shape.setAttribute("r", size / 2);
-    } else if (shape.tagName === "polygon") {
-        const points = [];
-        for (let i = 0; i < 3; i++) {
-            points.push(`${Math.random() * size},${Math.random() * size}`);
-        }
-        shape.setAttribute("points", points.join(" "));
-    }
-
-    return shape;
+  return shape;
 }
 
+// Function to animate shapes across the screen
 function animateShape(shape) {
-    const duration = Math.random() * 10 + 5;
-    const x = Math.random() * window.innerWidth;
-    const y = Math.random() * window.innerHeight;
+  const animationDuration = Math.random() * 10 + 5; // Duration between 5 and 15 seconds
+  const targetX = Math.random() * window.innerWidth;
+  const targetY = Math.random() * window.innerHeight;
 
-    shape.style.transform = `translate(${x}px, ${y}px)`;
-    shape.style.transition = `transform ${duration}s ease-in-out`;
+  shape.style.transform = `translate(${targetX}px, ${targetY}px)`;
+  shape.style.transition = `transform ${animationDuration}s ease-in-out`;
 
-    setTimeout(() => {
-        animateShape(shape);
-    }, duration * 1000);
+  setTimeout(() => animateShape(shape), animationDuration * 1000); // Recursively animate
 }
 
-
-for (let i = 0; i < 20; i++) {
-    const shape = createShape();
-    svg.appendChild(shape);
-    animateShape(shape);
+// Generate and append shapes
+for (let i = 0; i < MAX_SHAPES; i++) {
+  const shape = createShape();
+  shapes.push(shape);
+  svgBackground.appendChild(shape);
 }
 
-// Add the SVG to the document
-document.body.appendChild(svg);
+// Initiate animation for each shape
+shapes.forEach(animateShape);
 
+// Add SVG background to the document
+document.body.appendChild(svgBackground);
+
+// Update SVG dimensions on window resize
 function handleResize() {
-    svg.setAttribute("width", window.innerWidth);
-    svg.setAttribute("height", window.innerHeight);
+  svgBackground.setAttribute("width", window.innerWidth);
+  svgBackground.setAttribute("height", window.innerHeight);
 }
 
 window.addEventListener("resize", handleResize);
-
-
 handleResize();
+
+// Initialize animations on scroll (requires AOS library)
 AOS.init();
 
+
 document.querySelectorAll('.faq-question').forEach(question => {
-    question.addEventListener('click', () => {
-        const answer = question.nextElementSibling;
-        const isOpen = question.classList.contains('active');
-
-
-        document.querySelectorAll('.faq-question').forEach(q => {
-            if (q !== question) {
-                q.classList.remove('active');
-                q.nextElementSibling.style.maxHeight = null;
-            }
-        });
-
-        question.classList.toggle('active');
-        if (!isOpen) {
-            answer.style.maxHeight = answer.scrollHeight + "px";
-        } else {
-            answer.style.maxHeight = null;
-        }
+  question.addEventListener('click', () => {
+    const answer = question.nextElementSibling;
+    const isOpen = question.classList.contains('active');
+    document.querySelectorAll('.faq-question').forEach(q => {
+      if (q !== question) {
+        q.classList.remove('active');
+        q.nextElementSibling.style.maxHeight = null;
+      }
     });
+    question.classList.toggle('active');
+    if (!isOpen) {
+      answer.style.maxHeight = answer.scrollHeight + "px";
+    } else {
+      answer.style.maxHeight = null;
+    }
+  });
 });
 
 const removePreloadColors = () => {
