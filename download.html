@@ -1,502 +1,566 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Download BG Remover for pc - Free & Premium Versions</title>
-    <link rel="icon" href="assets/images/logo.png" type="image/png">
-    <meta name="keywords"
-        content="remove image background, bg remover, offline tool, free background remover, remove bg offline, remove bg for pc">
-    <meta name="description"
-        content="Remove image background with our 100% free, offline,  and easy-to-use tool. Say goodbye to complex online tools and edit images effortlessly with our offline background remover. Try it now for quick and professional-looking photo editing.">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" href="assets/images/logo.png" type="image/png" />
+    <meta
+      name="keywords"
+      content="remove image background, bg remover, offline tool, free background remover, remove bg offline, remove bg for pc"
+    />
+    <meta
+      name="description"
+      content="Remove image background with our 100% free, offline,  and easy-to-use tool. Say goodbye to complex online tools and edit images effortlessly with our offline background remover. Try it now for quick and professional-looking photo editing."
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+      type="module"
+    ></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <meta property="og:title" content="AI powered Offline Background Remover!">
-    <meta property="og:description"
-        content="Effortlessly remove backgrounds with AI precision - Download now for picture-perfect results!">
-    <meta property="og:image" content="https://ik.imagekit.io/developersharif/bg-remover/Screenshot_7.png">
-    <meta property="og:url" content="https://developersharif.github.io/bgremover-app">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AI powered Offline Background Remover!">
-    <meta name="twitter:description"
-        content="Effortlessly remove backgrounds with AI precision - Download now for picture-perfect results!">
-    <meta name="twitter:image" content="https://ik.imagekit.io/developersharif/bg-remover/Screenshot_7.png">
+    <meta
+      property="og:title"
+      content="AI powered Offline Background Remover!"
+    />
+    <meta
+      property="og:description"
+      content="Effortlessly remove backgrounds with AI precision - Download now for picture-perfect results!"
+    />
+    <meta
+      property="og:image"
+      content="https://ik.imagekit.io/developersharif/bg-remover/Screenshot_7.png"
+    />
+    <meta
+      property="og:url"
+      content="https://developersharif.github.io/bgremover-app"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="AI powered Offline Background Remover!"
+    />
+    <meta
+      name="twitter:description"
+      content="Effortlessly remove backgrounds with AI precision - Download now for picture-perfect results!"
+    />
+    <meta
+      name="twitter:image"
+      content="https://ik.imagekit.io/developersharif/bg-remover/Screenshot_7.png"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
+    <link rel="stylesheet" href="assets/css/flash.css" />
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C0TVJ4BWV1"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-C0TVJ4BWV1"
+    ></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-        gtag('config', 'G-C0TVJ4BWV1');
+      gtag("config", "G-C0TVJ4BWV1");
     </script>
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f4f7fa;
+      }
+
+      /* Header Section */
+      .topbar {
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .topbar .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        max-width: 1300px;
+        margin: 0 auto;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+      }
+
+      .logo img {
+        max-width: 48px;
+      }
+
+      .navbar ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 20px;
+      }
+
+      .navbar ul li a {
+        text-decoration: none;
+        color: #2c3e50;
+        font-weight: bold;
+        font-size: 1rem;
+        padding: 10px;
+        transition: color 0.3s ease;
+      }
+
+      .navbar ul li a:hover {
+        color: #3498db;
+      }
+
+      /* Hamburger icon styling */
+      .hamburger-menu {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+      }
+
+      .hamburger-menu span {
+        width: 30px;
+        height: 3px;
+        background-color: #2c3e50;
+        transition: 0.3s;
+      }
+
+      /* Header Buttons */
+      .header-buttons {
+        display: flex;
+        gap: 15px;
+      }
+
+      .btn-login,
+      .btn-primary {
+        padding: 10px 10px;
+        border-radius: 5px;
+        font-size: 1rem;
+        font-weight: bold;
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      .btn-primary {
+        background-color: #00a6ff;
+        color: #ffffff;
+        transition: background-color 0.3s ease;
+      }
+
+      .btn-primary:hover {
+        background-color: #2980b9;
+      }
+
+      .btn {
+        display: inline-block;
+        background-color: var(--primary-color);
+        color: var(--white);
+        padding: 12px 25px;
+        font-size: 1rem;
+        font-weight: 600;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+
+      .btn:hover {
+        background-color: #2980b9;
+      }
+
+      /* Mobile view */
+      @media screen and (max-width: 768px) {
+        .hamburger-menu {
+          display: block;
         }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f4f7fa;
-        }
-
-        /* Header Section */
-        .topbar {
-            backdrop-filter: blur(10px);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .topbar .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px;
-            max-width: 1300px;
-            margin: 0 auto;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-
-        .logo img {
-            max-width: 48px;
-        }
-
+        /* Mobile navbar hidden by default */
         .navbar ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            gap: 20px;
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 60px;
+          right: 20px;
+          backdrop-filter: blur(10px);
+          border-radius: 10px;
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+          width: 200px;
+          text-align: right;
+        }
+
+        /* Mobile navbar visible when active */
+        .navbar ul.active {
+          display: flex;
+        }
+
+        /* Hamburger active state */
+        .hamburger-menu.active + .navbar ul {
+          display: flex;
+        }
+
+        .navbar ul li {
+          padding: 15px;
         }
 
         .navbar ul li a {
-            text-decoration: none;
-            color: #2c3e50;
-            font-weight: bold;
-            font-size: 1rem;
-            padding: 10px;
-            transition: color 0.3s ease;
+          font-size: 1rem;
         }
+      }
 
-        .navbar ul li a:hover {
-            color: #3498db;
-        }
+      .container {
+        max-width: 1200px;
+        margin: 30px auto;
+        padding: 40px 20px;
+      }
 
-        /* Hamburger icon styling */
-        .hamburger-menu {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            cursor: pointer;
-        }
+      .download-header {
+        text-align: center;
+        margin-bottom: 50px;
+        margin-top: 50px;
+      }
 
-        .hamburger-menu span {
-            width: 30px;
-            height: 3px;
-            background-color: #2c3e50;
-            transition: 0.3s;
-        }
+      h1 {
+        font-size: 2.5rem;
+        color: #2d3748;
+        margin-bottom: 15px;
+      }
 
-        /* Header Buttons */
-        .header-buttons {
-            display: flex;
-            gap: 15px;
-        }
+      .subtitle {
+        font-size: 1.1rem;
+        color: #718096;
+      }
 
-        .btn-login,
-        .btn-primary {
-            padding: 10px 10px;
-            border-radius: 5px;
-            font-size: 1rem;
-            font-weight: bold;
-            text-decoration: none;
-            display: inline-block;
-        }
+      .download-options {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+        margin-bottom: 50px;
+      }
 
-        .btn-primary {
-            background-color: #00a6ff;
-            color: #ffffff;
-            transition: background-color 0.3s ease;
-        }
+      .download-card {
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        width: 300px;
+        text-align: center;
+        transition: transform 0.3s ease;
+      }
 
-        .btn-primary:hover {
-            background-color: #2980b9;
-        }
+      .download-card:hover {
+        transform: translateY(-5px);
+      }
 
-        .btn {
-            display: inline-block;
-            background-color: var(--primary-color);
-            color: var(--white);
-            padding: 12px 25px;
-            font-size: 1rem;
-            font-weight: 600;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
+      .download-card h2 {
+        font-size: 1.5rem;
+        color: #2d3748;
+        margin-bottom: 15px;
+      }
 
-        .btn:hover {
-            background-color: #2980b9;
-        }
+      .download-card p {
+        font-size: 1rem;
+        color: #718096;
+        margin-bottom: 20px;
+      }
 
-        /* Mobile view */
-        @media screen and (max-width: 768px) {
-            .hamburger-menu {
-                display: block;
-            }
+      .version-select {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 15px;
+        border: 1px solid #e2e8f0;
+        border-radius: 4px;
+        font-size: 0.9rem;
+      }
 
-            /* Mobile navbar hidden by default */
-            .navbar ul {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 60px;
-                right: 20px;
-                backdrop-filter: blur(10px);
-                border-radius: 10px;
-                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-                width: 200px;
-                text-align: right;
-            }
+      .download-button {
+        display: inline-block;
+        background-color: #4299e1;
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 6px;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+      }
 
-            /* Mobile navbar visible when active */
-            .navbar ul.active {
-                display: flex;
-            }
+      .download-button:hover {
+        background-color: #3182ce;
+      }
 
-            /* Hamburger active state */
-            .hamburger-menu.active+.navbar ul {
-                display: flex;
-            }
+      .premium-section {
+        background-color: #ebf8ff;
+        border-radius: 12px;
+        padding: 40px;
+        text-align: center;
+        margin-top: 50px;
+      }
 
-            .navbar ul li {
-                padding: 15px;
-            }
+      .premium-section h2 {
+        font-size: 2rem;
+        color: #2d3748;
+        margin-bottom: 20px;
+      }
 
-            .navbar ul li a {
-                font-size: 1rem;
-            }
-        }
+      .premium-section p {
+        font-size: 1.1rem;
+        color: #4a5568;
+        margin-bottom: 30px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
 
-        .container {
-            max-width: 1200px;
-            margin: 30px auto;
-            padding: 40px 20px;
-        }
+      .premium-button {
+        display: inline-block;
+        background-color: #48bb78;
+        color: white;
+        text-decoration: none;
+        padding: 12px 24px;
+        border-radius: 6px;
+        font-weight: 600;
+        font-size: 1.1rem;
+        transition: background-color 0.3s ease;
+      }
 
-        .download-header {
-            text-align: center;
-            margin-bottom: 50px;
-            margin-top: 50px;
-        }
+      .premium-button:hover {
+        background-color: #38a169;
+      }
 
-        h1 {
-            font-size: 2.5rem;
-            color: #2d3748;
-            margin-bottom: 15px;
-        }
+      ul {
+        list-style: none;
+        padding-left: 20px;
+      }
 
-        .subtitle {
-            font-size: 1.1rem;
-            color: #718096;
-        }
+      code {
+        display: block;
+        background-color: #f0f0f0;
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        font-size: 16px;
+      }
 
-        .download-options {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-            margin-bottom: 50px;
-        }
+      .step {
+        margin-bottom: 20px;
+      }
 
-        .download-card {
-            background-color: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 30px;
-            width: 300px;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
+      .step-title {
+        font-size: 1.2em;
+        color: #34495e;
+        margin-bottom: 10px;
+      }
 
-        .download-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .download-card h2 {
-            font-size: 1.5rem;
-            color: #2d3748;
-            margin-bottom: 15px;
-        }
-
-        .download-card p {
-            font-size: 1rem;
-            color: #718096;
-            margin-bottom: 20px;
-        }
-
-        .version-select {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 15px;
-            border: 1px solid #e2e8f0;
-            border-radius: 4px;
-            font-size: 0.9rem;
-        }
-
-        .download-button {
-            display: inline-block;
-            background-color: #4299e1;
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 6px;
-            font-weight: 600;
-            transition: background-color 0.3s ease;
-        }
-
-        .download-button:hover {
-            background-color: #3182ce;
-        }
-
-        .premium-section {
-            background-color: #ebf8ff;
-            border-radius: 12px;
-            padding: 40px;
-            text-align: center;
-            margin-top: 50px;
-        }
-
-        .premium-section h2 {
-            font-size: 2rem;
-            color: #2d3748;
-            margin-bottom: 20px;
-        }
-
-        .premium-section p {
-            font-size: 1.1rem;
-            color: #4a5568;
-            margin-bottom: 30px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .premium-button {
-            display: inline-block;
-            background-color: #48bb78;
-            color: white;
-            text-decoration: none;
-            padding: 12px 24px;
-            border-radius: 6px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: background-color 0.3s ease;
-        }
-
-        .premium-button:hover {
-            background-color: #38a169;
-        }
-
-
-        ul {
-            list-style: none;
-            padding-left: 20px;
-        }
-
-        code {
-            display: block;
-            background-color: #f0f0f0;
-            padding: 10px;
-            border-radius: 5px;
-            margin-bottom: 20px;
-            font-size: 16px;
-        }
-
-        .step {
-            margin-bottom: 20px;
-        }
-
-        .step-title {
-            font-size: 1.2em;
-            color: #34495e;
-            margin-bottom: 10px;
-        }
-
-        .linux-setup {
-            background-color: white;
-            text-align: center;
-            padding: 5px;
-            border-radius: 10px;
-        }
+      .linux-setup {
+        background-color: white;
+        text-align: center;
+        padding: 5px;
+        border-radius: 10px;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <header class="topbar">
-        <div class="container">
-            <div class="logo">
-                <a href="index.html"><img src="assets/images/logo.png" alt="App Logo"></a>
-                <p>BG Remover</p>
-            </div>
-            <nav class="navbar">
-                <ul>
-                    <li><a href="index.html#features">Features</a></li>
-                    <li><a href="index.html#pricing">Pricing</a></li>
-                    <li><a href="index.html#contact">Contact</a></li>
-                    <!-- <li><a href="/download.html">Download</a></li> -->
-                </ul>
-            </nav>
-            <!-- <div class="header-buttons">
+      <div class="container">
+        <div class="logo">
+          <a href="index.html"
+            ><img src="assets/images/logo.png" alt="App Logo"
+          /></a>
+          <p>BG Remover</p>
+        </div>
+        <nav class="navbar">
+          <ul>
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="index.html#pricing">Pricing</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <!-- <li><a href="/download.html">Download</a></li> -->
+          </ul>
+        </nav>
+        <!-- <div class="header-buttons">
                 <a href="/download.html" class="btn-primary">
                     <i class="fa fa-windows" aria-hidden="true"></i> <i class="fa fa-linux" aria-hidden="true"></i>
                     Download</a>
             </div> -->
-            <div class="hamburger-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+        <div class="hamburger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
+      </div>
     </header>
     <div class="container" data-aos="fade-down">
+      <div class="download-header">
+        <h2>Download BG Remover</h2>
+        <p class="subtitle">
+          Choose your free version or upgrade to premium for unlimited features!
+        </p>
+      </div>
+
+      <div class="download-options" data-aos="fade-down">
+        <div class="download-card">
+          <h2>Windows</h2>
+          <p>Compatible with Windows 7, 8, 10, and 11</p>
+          <select class="version-select" id="windows-version">
+            <option value="3.0">Version 3.0 (New)</option>
+            <option value="2.0">Version 2.0</option>
+            <option value="1.0">Version 1.0</option>
+          </select>
+          <a href="#" class="download-button" onclick="downloadWindows()"
+            >Download</a
+          >
+        </div>
+        <div class="download-card">
+          <h2>Linux</h2>
+          <p>For Ubuntu, Fedora, and more</p>
+          <select class="version-select" id="linux-version">
+            <!-- <option value="3.0">Version 3.0</option> -->
+            <option value="2.0">Version 2.0</option>
+            <option value="1.0">Version 1.0</option>
+          </select>
+          <a href="#" class="download-button" onclick="downloadLinux()"
+            >Download</a
+          >
+        </div>
+      </div>
+
+      <div class="container" data-aos="fade-down">
         <div class="download-header">
-            <h2>Download BG Remover</h2>
-            <p class="subtitle">Choose your free version or upgrade to premium for unlimited features!</p>
+          <h2>System Requirements</h2>
+          <p class="subtitle">
+            Make sure your system meets the minimum requirements for a smooth
+            experience.
+          </p>
         </div>
 
         <div class="download-options" data-aos="fade-down">
-            <div class="download-card">
-                <h2>Windows</h2>
-                <p>Compatible with Windows 7, 8, 10, and 11</p>
-                <select class="version-select" id="windows-version">
-                    <option value="3.0">Version 3.0 (New)</option>
-                    <option value="2.0">Version 2.0</option>
-                    <option value="1.0">Version 1.0</option>
-                </select>
-                <a href="#" class="download-button" onclick="downloadWindows()">Download</a>
-            </div>
-            <div class="download-card">
-                <h2>Linux</h2>
-                <p>For Ubuntu, Fedora, and more</p>
-                <select class="version-select" id="linux-version">
-                    <!-- <option value="3.0">Version 3.0</option> -->
-                    <option value="2.0">Version 2.0</option>
-                    <option value="1.0">Version 1.0</option>
-                </select>
-                <a href="#" class="download-button" onclick="downloadLinux()">Download</a>
-            </div>
-        </div>
-
-        <div class="container" data-aos="fade-down">
-            <div class="download-header">
-                <h2>System Requirements</h2>
-                <p class="subtitle">Make sure your system meets the minimum requirements for a smooth experience.</p>
-            </div>
-
-            <div class="download-options" data-aos="fade-down">
-                <div class="download-card">
-                    <h2>Minimum Requirements</h2>
-                    <ul>
-                        <li>OS: Windows 10/11 (64-bit) (v:3.0)</li>
-                        <li>Processor: Intel Core i5 (quad-core) or equivalent</li>
-                        <li>RAM: 4 GB</li>
-                        <li>GPU: Integrated graphics (optional, but recommended)</li>
-                        <li>Storage: 200 MB of free space</li>
-                    </ul>
-                </div>
-                <div class="download-card">
-                    <h2>Recommended Requirements</h2>
-                    <ul>
-                        <li>Processor: Intel Core i7 / AMD Ryzen 7 or higher</li>
-                        <li>RAM: 16 GB or more</li>
-                        <li>GPU: Dedicated GPU (NVIDIA GTX 1060 or higher)</li>
-                        <li>Storage: 1 GB of free space</li>
-                    </ul>
-                </div>
-                <p class="subtitle" style="text-align: center;">💡 This tool supports ONNX models for enhanced
-                    performance and multi-model compatibility.</p>
-                <p class="subtitle" style="text-align: center;">
-                    🔗 Check if your device supports ONNX models:
-                    <a href="https://onnx.ai" target="_blank">Visit ONNX Compatibility Check</a>
-                </p>
-            </div>
-        </div>
-
-
-        <div class="linux-setup">
-            <h2>Linux Installation Guide</h2>
+          <div class="download-card">
+            <h2>Minimum Requirements</h2>
             <ul>
-                <li class="step">
-                    <div class="step-title">Step 1: Download the Installation Script</div>
-                    <code>wget https://bgremover.realbrain.cc/linux-installation.sh</code>
-                </li>
-                <li class="step">
-                    <div class="step-title">Step 2: Make the Script Executable</div>
-                    <code>chmod +x linux-installation.sh</code>
-                </li>
-                <li class="step">
-                    <div class="step-title">Step 3: Run the Installation Script</div>
-                    <code>sudo ./linux-installation.sh</code>
-                </li>
+              <li>OS: Windows 10/11 (64-bit) (v:3.0)</li>
+              <li>Processor: Intel Core i5 (quad-core) or equivalent</li>
+              <li>RAM: 4 GB</li>
+              <li>GPU: Integrated graphics (optional, but recommended)</li>
+              <li>Storage: 200 MB of free space</li>
             </ul>
+          </div>
+          <div class="download-card">
+            <h2>Recommended Requirements</h2>
+            <ul>
+              <li>Processor: Intel Core i7 / AMD Ryzen 7 or higher</li>
+              <li>RAM: 16 GB or more</li>
+              <li>GPU: Dedicated GPU (NVIDIA GTX 1060 or higher)</li>
+              <li>Storage: 1 GB of free space</li>
+            </ul>
+          </div>
+          <p class="subtitle" style="text-align: center">
+            💡 This tool supports ONNX models for enhanced performance and
+            multi-model compatibility.
+          </p>
+          <p class="subtitle" style="text-align: center">
+            🔗 Check if your device supports ONNX models:
+            <a href="https://onnx.ai" target="_blank"
+              >Visit ONNX Compatibility Check</a
+            >
+          </p>
         </div>
+      </div>
 
-        <div class="premium-section" data-aos="fade-down" id="premium">
-            <h2>Unlock Unlimited Potential with Premium</h2>
-            <p>Upgrade to our Premium version for unlimited batch processing, advanced customization options, and
-                priority support. Remove backgrounds faster and more efficiently than ever before!</p>
-            <a href="https://buymeacoffee.com/developersharif/e/315741" class="premium-button">Go Premium - Only $49
-                Lifetime Access</a>
-        </div>
+      <div class="linux-setup">
+        <h2>Linux Installation Guide</h2>
+        <ul>
+          <li class="step">
+            <div class="step-title">
+              Step 1: Download the Installation Script
+            </div>
+            <code
+              >wget https://bgremover.realbrain.cc/linux-installation.sh</code
+            >
+          </li>
+          <li class="step">
+            <div class="step-title">Step 2: Make the Script Executable</div>
+            <code>chmod +x linux-installation.sh</code>
+          </li>
+          <li class="step">
+            <div class="step-title">Step 3: Run the Installation Script</div>
+            <code>sudo ./linux-installation.sh</code>
+          </li>
+        </ul>
+      </div>
+
+      <div class="premium-section" data-aos="fade-down" id="premium">
+        <h2>Unlock Unlimited Potential with Premium</h2>
+        <p>
+          Upgrade to our Premium version for unlimited batch processing,
+          advanced customization options, and priority support. Remove
+          backgrounds faster and more efficiently than ever before!
+        </p>
+        <a
+          href="https://buymeacoffee.com/developersharif/e/315741"
+          class="premium-button"
+          >Go Premium - Only $49 Lifetime Access</a
+        >
+      </div>
     </div>
 
     <script>
-        const downloadLinks = {
-            windows: {
-                '3.0': 'https://buymeacoffee.com/developersharif/e/315737',
-                '2.0': 'https://github.com/developersharif/bgremover-app/releases/download/v2.0.0/bg-remover-setup-2.0.0.exe',
-                '1.0': 'https://github.com/developersharif/bgremover-app/releases/download/v1.1.2/BG-Remover.exe'
-            },
-            linux: {
-                // '3.0': 'https://example.com/downloads/linux/bg-remover-linux-3.0.tar.gz',
-                '2.0': 'https://github.com/developersharif/bgremover-app/releases/download/v2.0.0/bg-remover-linux.Remover',
-                '1.0': 'https://github.com/developersharif/bgremover-app/releases/download/v1.0.0/BG.Remover'
-            }
-        };
+      const downloadLinks = {
+        windows: {
+          "3.0": "https://buymeacoffee.com/developersharif/e/315737",
+          "2.0":
+            "https://github.com/developersharif/bgremover-app/releases/download/v2.0.0/bg-remover-setup-2.0.0.exe",
+          "1.0":
+            "https://github.com/developersharif/bgremover-app/releases/download/v1.1.2/BG-Remover.exe",
+        },
+        linux: {
+          // '3.0': 'https://example.com/downloads/linux/bg-remover-linux-3.0.tar.gz',
+          "2.0":
+            "https://github.com/developersharif/bgremover-app/releases/download/v2.0.0/bg-remover-linux.Remover",
+          "1.0":
+            "https://github.com/developersharif/bgremover-app/releases/download/v1.0.0/BG.Remover",
+        },
+      };
 
-        function downloadWindows() {
-            const version = document.getElementById('windows-version').value;
-            const downloadUrl = downloadLinks.windows[version];
-            if (downloadUrl) {
-                window.location.href = downloadUrl;
-            }
+      function downloadWindows() {
+        const version = document.getElementById("windows-version").value;
+        const downloadUrl = downloadLinks.windows[version];
+        if (downloadUrl) {
+          window.location.href = downloadUrl;
         }
+      }
 
-        function downloadLinux() {
-            const version = document.getElementById('linux-version').value;
-            const downloadUrl = downloadLinks.linux[version];
-            if (downloadUrl) {
-                window.location.href = downloadUrl;
-            }
+      function downloadLinux() {
+        const version = document.getElementById("linux-version").value;
+        const downloadUrl = downloadLinks.linux[version];
+        if (downloadUrl) {
+          window.location.href = downloadUrl;
         }
+      }
     </script>
     <script src="assets/main.js"></script>
-</body>
-
+  </body>
 </html>

@@ -1,220 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Download ONNX Models - BG Remover</title>
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f4f7fa;
-        }
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f4f7fa;
+      }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+      }
 
-        .page-header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
+      .page-header {
+        text-align: center;
+        margin-bottom: 50px;
+      }
 
-        h1 {
-            font-size: 2.5rem;
-            color: #2d3748;
-            margin-bottom: 15px;
-        }
+      h1 {
+        font-size: 2.5rem;
+        color: #2d3748;
+        margin-bottom: 15px;
+      }
 
-        .subtitle {
-            font-size: 1.1rem;
-            color: #718096;
-            max-width: 600px;
-            margin: 0 auto;
-        }
+      .subtitle {
+        font-size: 1.1rem;
+        color: #718096;
+        max-width: 600px;
+        margin: 0 auto;
+      }
 
-        .models-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-bottom: 50px;
-        }
+      .models-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-bottom: 50px;
+      }
 
-        .model-card {
-            background-color: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 30px;
-            transition: transform 0.3s ease;
-        }
+      .model-card {
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        transition: transform 0.3s ease;
+      }
 
-        .model-card:hover {
-            transform: translateY(-5px);
-        }
+      .model-card:hover {
+        transform: translateY(-5px);
+      }
 
-        .model-card h2 {
-            font-size: 1.5rem;
-            color: #2d3748;
-            margin-bottom: 15px;
-        }
+      .model-card h2 {
+        font-size: 1.5rem;
+        color: #2d3748;
+        margin-bottom: 15px;
+      }
 
-        .model-card p {
-            font-size: 1rem;
-            color: #718096;
-            margin-bottom: 20px;
-        }
+      .model-card p {
+        font-size: 1rem;
+        color: #718096;
+        margin-bottom: 20px;
+      }
 
-        .model-info {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-            font-size: 0.9rem;
-            color: #4a5568;
-        }
+      .model-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        font-size: 0.9rem;
+        color: #4a5568;
+      }
 
-        .download-button {
-            display: inline-block;
-            background-color: #4299e1;
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 6px;
-            font-weight: 600;
-            transition: background-color 0.3s ease;
-        }
+      .download-button {
+        display: inline-block;
+        background-color: #4299e1;
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 6px;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+      }
 
-        .download-button:hover {
-            background-color: #3182ce;
-        }
+      .download-button:hover {
+        background-color: #3182ce;
+      }
 
-        .info-section {
-            background-color: #e6fffa;
-            border-radius: 12px;
-            padding: 30px;
-            margin-top: 50px;
-        }
+      .info-section {
+        background-color: #e6fffa;
+        border-radius: 12px;
+        padding: 30px;
+        margin-top: 50px;
+      }
 
-        .info-section h2 {
-            font-size: 1.8rem;
-            color: #2d3748;
-            margin-bottom: 20px;
-        }
+      .info-section h2 {
+        font-size: 1.8rem;
+        color: #2d3748;
+        margin-bottom: 20px;
+      }
 
-        .info-section p {
-            font-size: 1rem;
-            color: #4a5568;
-            margin-bottom: 15px;
-        }
+      .info-section p {
+        font-size: 1rem;
+        color: #4a5568;
+        margin-bottom: 15px;
+      }
     </style>
-</head>
+    <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
+    <link rel="stylesheet" href="assets/css/flash.css" />
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <div class="page-header">
-            <h1>Download ONNX Models</h1>
-            <p class="subtitle">Enhance your background removal capabilities with these rembg-compatible ONNX models.
-                Choose the best model for your specific needs.</p>
+      <div class="page-header">
+        <h1>Download ONNX Models</h1>
+        <p class="subtitle">
+          Enhance your background removal capabilities with these
+          rembg-compatible ONNX models. Choose the best model for your specific
+          needs.
+        </p>
+      </div>
+
+      <div class="models-grid">
+        <div class="model-card">
+          <h2>u2net</h2>
+          <p>A pre-trained model for general use cases.</p>
+          <div class="model-info">
+            <span>Size: 167 MB</span>
+            <span>Version: 1.0</span>
+          </div>
+          <a
+            href="https://github.com/developersharif/bgremover-app/releases/download/u2net/u2net.onnx"
+            class="download-button"
+            >Download u2net</a
+          >
+        </div>
+        <div class="model-card">
+          <h2>silueta</h2>
+          <p>Same as u2net but the size is reduced to 43Mb.</p>
+          <div class="model-info">
+            <span>Size: 43 MB</span>
+            <span>Version: 1.0</span>
+          </div>
+          <a
+            href="https://github.com/developersharif/bgremover-app/releases/download/silueta/silueta.onnx"
+            class="download-button"
+            >Download u2net</a
+          >
         </div>
 
-        <div class="models-grid">
-            <div class="model-card">
-                <h2>u2net</h2>
-                <p>A pre-trained model for general use cases.</p>
-                <div class="model-info">
-                    <span>Size: 167 MB</span>
-                    <span>Version: 1.0</span>
-                </div>
-                <a href="https://github.com/developersharif/bgremover-app/releases/download/u2net/u2net.onnx"
-                    class="download-button">Download u2net</a>
-            </div>
-            <div class="model-card">
-                <h2>silueta</h2>
-                <p>Same as u2net but the size is reduced to 43Mb.</p>
-                <div class="model-info">
-                    <span>Size: 43 MB</span>
-                    <span>Version: 1.0</span>
-                </div>
-                <a href="https://github.com/developersharif/bgremover-app/releases/download/silueta/silueta.onnx"
-                    class="download-button">Download u2net</a>
-            </div>
-
-            <div class="model-card">
-                <h2>birefnet-general-lite </h2>
-                <p>A light pre-trained model for general use cases.</p>
-                <div class="model-info">
-                    <span>Size: 213.63 MB</span>
-                    <span>Version: 1.0</span>
-                </div>
-                <a href="https://github.com/developersharif/bgremover-app/releases/download/birefnet-general-lite/BiRefNet-general-bb_swin_v1_tiny-epoch_232.onnx"
-                    class="download-button">Download u2netp</a>
-            </div>
-
-            <div class="model-card">
-                <h2>u2net_human_seg</h2>
-                <p>A pre-trained model for human segmentation.</p>
-                <div class="model-info">
-                    <span>Size: 167.84 MB</span>
-                    <span>Version: 1.0</span>
-                </div>
-                <a href="https://github.com/developersharif/bgremover-app/releases/download/u2net_human_seg/u2net_human_seg.onnx"
-                    class="download-button">Download u2net_human_seg</a>
-            </div>
-
-            <div class="model-card">
-                <h2>u2net_cloth_seg</h2>
-                <p>A pre-trained model for Cloths Parsing from human portrait. Here clothes.</p>
-                <div class="model-info">
-                    <span>Size: 168.03 MB</span>
-                    <span>Version: 1.0</span>
-                </div>
-                <a href="https://github.com/developersharif/bgremover-app/releases/download/u2net_cloth_seg/u2net_cloth_seg.onnx"
-                    class="download-button">Download u2net_human_seg</a>
-            </div>
-
-            <div class="model-card">
-                <h2>isnet-anime</h2>
-                <p>A high-accuracy segmentation for anime characters.</p>
-                <div class="model-info">
-                    <span>Size:167.91 MB</span>
-                    <span>Version: 1.0</span>
-                </div>
-                <a href="https://github.com/developersharif/bgremover-app/releases/download/isnet-anime/isnet-anime.onnx"
-                    class="download-button">Download u2net_cloth_seg</a>
-            </div>
-            <div class="model-card">
-                <h2>BiRefNet-general-bb</h2>
-                <p>A light pre-trained model for general use cases.</p>
-                <div class="model-info">
-                    <span>Size:213 MB</span>
-                    <span>Version: 1.0</span>
-                </div>
-                <a href="https://github.com/developersharif/bgremover-app/releases/download/BiRefNet-general-bb_swin_v1_tiny-epoch_232/BiRefNet-general-bb_swin_v1_tiny-epoch_232.onnx"
-                    class="download-button">Download u2net_cloth_seg</a>
-            </div>
+        <div class="model-card">
+          <h2>birefnet-general-lite</h2>
+          <p>A light pre-trained model for general use cases.</p>
+          <div class="model-info">
+            <span>Size: 213.63 MB</span>
+            <span>Version: 1.0</span>
+          </div>
+          <a
+            href="https://github.com/developersharif/bgremover-app/releases/download/birefnet-general-lite/BiRefNet-general-bb_swin_v1_tiny-epoch_232.onnx"
+            class="download-button"
+            >Download u2netp</a
+          >
         </div>
 
-        <div class="info-section">
-            <h2>How to Use These Models</h2>
-            <p>1. Download the desired ONNX model.</p>
-            <p>2. Place the downloaded model file in the appropriate directory of your BG Remover installation.</p>
-            <p>3. In the BG Remover Model <b>Settings>Chose Custom Model>yes>save</b>, select the model you wish to use
-                for background removal.</p>
-            <p>4. Experiment with different models to find the best one for your specific use case.</p>
-            <p>Note: The premium version of BG Remover allows for easy switching between models and provides optimized
-                settings for each.</p>
+        <div class="model-card">
+          <h2>u2net_human_seg</h2>
+          <p>A pre-trained model for human segmentation.</p>
+          <div class="model-info">
+            <span>Size: 167.84 MB</span>
+            <span>Version: 1.0</span>
+          </div>
+          <a
+            href="https://github.com/developersharif/bgremover-app/releases/download/u2net_human_seg/u2net_human_seg.onnx"
+            class="download-button"
+            >Download u2net_human_seg</a
+          >
         </div>
+
+        <div class="model-card">
+          <h2>u2net_cloth_seg</h2>
+          <p>
+            A pre-trained model for Cloths Parsing from human portrait. Here
+            clothes.
+          </p>
+          <div class="model-info">
+            <span>Size: 168.03 MB</span>
+            <span>Version: 1.0</span>
+          </div>
+          <a
+            href="https://github.com/developersharif/bgremover-app/releases/download/u2net_cloth_seg/u2net_cloth_seg.onnx"
+            class="download-button"
+            >Download u2net_human_seg</a
+          >
+        </div>
+
+        <div class="model-card">
+          <h2>isnet-anime</h2>
+          <p>A high-accuracy segmentation for anime characters.</p>
+          <div class="model-info">
+            <span>Size:167.91 MB</span>
+            <span>Version: 1.0</span>
+          </div>
+          <a
+            href="https://github.com/developersharif/bgremover-app/releases/download/isnet-anime/isnet-anime.onnx"
+            class="download-button"
+            >Download u2net_cloth_seg</a
+          >
+        </div>
+        <div class="model-card">
+          <h2>BiRefNet-general-bb</h2>
+          <p>A light pre-trained model for general use cases.</p>
+          <div class="model-info">
+            <span>Size:213 MB</span>
+            <span>Version: 1.0</span>
+          </div>
+          <a
+            href="https://github.com/developersharif/bgremover-app/releases/download/BiRefNet-general-bb_swin_v1_tiny-epoch_232/BiRefNet-general-bb_swin_v1_tiny-epoch_232.onnx"
+            class="download-button"
+            >Download u2net_cloth_seg</a
+          >
+        </div>
+      </div>
+
+      <div class="info-section">
+        <h2>How to Use These Models</h2>
+        <p>1. Download the desired ONNX model.</p>
+        <p>
+          2. Place the downloaded model file in the appropriate directory of
+          your BG Remover installation.
+        </p>
+        <p>
+          3. In the BG Remover Model
+          <b>Settings>Chose Custom Model>yes>save</b>, select the model you wish
+          to use for background removal.
+        </p>
+        <p>
+          4. Experiment with different models to find the best one for your
+          specific use case.
+        </p>
+        <p>
+          Note: The premium version of BG Remover allows for easy switching
+          between models and provides optimized settings for each.
+        </p>
+      </div>
     </div>
-</body>
-
+  </body>
 </html>
