@@ -16,7 +16,10 @@
       name="description"
       content="Download BG Remover - the best AI-powered offline tool for removing backgrounds from images. Process multiple images in a batch, customize results, and enjoy high-quality output without an internet connection. Perfect for professionals and individuals."
     />
-
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bgremover.realbrain.cc/" />
+    <meta property="og:site_name" content="BG Remover" />
     <meta
       property="og:title"
       content="BG Remover - AI-powered Offline Background Removal Tool!"
@@ -52,72 +55,137 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Product",
-        "name": "BG Remover",
-        "operatingSystem": "WINDOWS",
-        "description": "AI-powered offline background remover with batch processing and customizable options.",
-        "image": "https://bgremover.realbrain.cc/assets/images/bgremover.png",
-        "sku": "bgremoveroffline_realbrain",
-        "brand": {
-          "@type": "Brand",
-          "name": "RealBrain"
-        },
-        "offers": {
-          "@type": "Offer",
-          "price": "49.0",
-          "priceCurrency": "USD",
-          "availability": "https://schema.org/InStock",
-          "url": "https://bgremover.realbrain.cc/#pricing",
-          "priceValidUntil": "2025-12-31",
-          "hasMerchantReturnPolicy": {
-            "@type": "MerchantReturnPolicy",
-            "returnPolicyCategory": "https://schema.org/NoRefund"
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://bgremover.realbrain.cc/#website",
+            "url": "https://bgremover.realbrain.cc/",
+            "name": "BG Remover",
+            "description": "AI-powered offline background remover with batch processing and customizable options.",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": "https://bgremover.realbrain.cc/?s={search_term_string}",
+                "query-input": "required name=search_term_string"
+              }
+            ],
+            "inLanguage": "en-US"
           },
-          "shippingDetails": {
-            "@type": "OfferShippingDetails",
-            "shippingRate": {
-              "@type": "MonetaryAmount",
-              "value": "0.0",
-              "currency": "USD"
+          {
+            "@type": "ImageObject",
+            "@id": "https://bgremover.realbrain.cc/#primaryimage",
+            "inLanguage": "en-US",
+            "url": "https://bgremover.realbrain.cc/assets/images/bgremover.png",
+            "contentUrl": "https://bgremover.realbrain.cc/assets/images/bgremover.png",
+            "caption": "AI-powered offline background remover"
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://bgremover.realbrain.cc/#webpage",
+            "url": "https://bgremover.realbrain.cc/",
+            "name": "BG Remover - AI-powered Offline Background Remover",
+            "isPartOf": {
+              "@id": "https://bgremover.realbrain.cc/#website"
             },
-            "deliveryTime": {
-              "@type": "ShippingDeliveryTime",
-              "handlingTime": {
-                "@type": "QuantitativeValue",
-                "minValue": 0,
-                "maxValue": 1,
-                "unitCode": "HOUR"
+            "primaryImageOfPage": {
+              "@id": "https://bgremover.realbrain.cc/#primaryimage"
+            },
+            "dateModified": "2024-11-16T00:00:00+00:00",
+            "description": "AI-powered offline background remover with batch processing and customizable options.",
+            "breadcrumb": {
+              "@id": "https://bgremover.realbrain.cc/#breadcrumb"
+            },
+            "inLanguage": "en-US",
+            "potentialAction": [
+              {
+                "@type": "ReadAction",
+                "target": ["https://bgremover.realbrain.cc/"]
+              }
+            ]
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://bgremover.realbrain.cc/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                  "@id": "https://bgremover.realbrain.cc/#webpage"
+                }
+              }
+            ]
+          },
+          {
+            "@type": "Product",
+            "@id": "https://bgremover.realbrain.cc/#product",
+            "name": "BG Remover",
+            "operatingSystem": "WINDOWS",
+            "description": "AI-powered offline background remover with batch processing and customizable options.",
+            "image": "https://bgremover.realbrain.cc/assets/images/bgremover.png",
+            "sku": "bgremoveroffline_realbrain",
+            "brand": {
+              "@type": "Brand",
+              "name": "RealBrain"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": "49.0",
+              "priceCurrency": "USD",
+              "availability": "https://schema.org/InStock",
+              "url": "https://bgremover.realbrain.cc/#pricing",
+              "priceValidUntil": "2025-12-31",
+              "hasMerchantReturnPolicy": {
+                "@type": "MerchantReturnPolicy",
+                "returnPolicyCategory": "https://schema.org/NoRefund"
               },
-              "transitTime": {
-                "@type": "QuantitativeValue",
-                "minValue": 0,
-                "maxValue": 1,
-                "unitCode": "HOUR"
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingRate": {
+                  "@type": "MonetaryAmount",
+                  "value": "0.0",
+                  "currency": "USD"
+                },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "unitCode": "HOUR"
+                  },
+                  "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "unitCode": "HOUR"
+                  }
+                },
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "name": "Worldwide"
+                }
               }
             },
-            "shippingDestination": {
-              "@type": "DefinedRegion",
-              "name": "Worldwide"
-            }
-          }
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.8",
-          "reviewCount": "120"
-        },
-        "review": [
-          {
-            "@type": "Review",
-            "author": {
-              "@type": "Person",
-              "name": "John Doe"
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.8",
+              "reviewCount": "120"
             },
-            "reviewRating": {
-              "@type": "Rating",
-              "ratingValue": "5"
-            },
-            "reviewBody": "BG Remover is a fantastic tool! It quickly removed the backgrounds from my photos, and the offline capability is a huge bonus."
+            "review": [
+              {
+                "@type": "Review",
+                "author": {
+                  "@type": "Person",
+                  "name": "John Doe"
+                },
+                "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": "5"
+                },
+                "reviewBody": "BG Remover is a fantastic tool! It quickly removed the backgrounds from my photos, and the offline capability is a huge bonus."
+              }
+            ]
           }
         ]
       }
