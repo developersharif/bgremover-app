@@ -30,8 +30,7 @@ sudo ./linux-installation.sh
 ```
 
 
-
-https://github.com/user-attachments/assets/5fc6db6b-acb9-4850-833e-c4c1242b0d34
+https://github.com/user-attachments/assets/eeb44d3a-2000-4fc6-a3cb-25ea092a374d
 
 
 
